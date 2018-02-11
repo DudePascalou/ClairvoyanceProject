@@ -1,0 +1,4351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CanGetAvailableMana" xml:space="preserve">
+    <value>[  
+   {  
+      "Name":"Bane of Bala Ged",
+      "Names":null,
+      "ManaCost":"{7}",
+      "Cmc":7.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Whenever Bane of Bala Ged attacks, defending player exiles two permanents he or she controls.",
+      "Flavor":"The continent of Bala Ged was ravaged by massive Eldrazi of Ulamog's lineage, its lush jungles and cascading rivers reduced to dust.",
+      "Artist":"Chase Stone",
+      "Number":"1",
+      "Power":"7",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401814,
+      "Variations":null,
+      "ImageName":"bane of bala ged",
+      "Id":"b2baccd791f5ada8bbd505f11bf81e70c8ea27ab",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"1"
+   },
+   {  
+      "Name":"Thought-Knot Seer",
+      "Names":null,
+      "ManaCost":"{3}{C}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"({C} represents colorless mana.)\nWhen Thought-Knot Seer enters the battlefield, target opponent reveals his or her hand. You choose a nonland card from it and exile that card.\nWhen Thought-Knot Seer leaves the battlefield, target opponent draws a card.",
+      "Flavor":null,
+      "Artist":"Svetlin Velinov",
+      "Number":"9",
+      "Power":"4",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407519,
+      "Variations":null,
+      "ImageName":"thought-knot seer",
+      "Id":"43cfeb9d9fbd9235787eb21d7ff7e4c4613d037f",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"9"
+   },
+   {  
+      "Name":"Elvish Spirit Guide",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Spirit",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Spirit"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "Flavor":"\"We are never without guidance, if we but seek it.\"\n—Taaveti of Kelsinko, Elvish Hunter",
+      "Artist":"Julie Baroh",
+      "Number":null,
+      "Power":"2",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3134,
+      "Variations":null,
+      "ImageName":"elvish spirit guide",
+      "Id":"f6f2ce78ff61260f319050a2c5b6b86323fff6d5",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"69"
+   },
+   {  
+      "Name":"Magus of the Library",
+      "Names":null,
+      "ManaCost":"{G}{G}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Human Wizard",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Human",
+         "Wizard"
+      ],
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "Flavor":"The ancient books slowly crumbled, their secrets turning to dust. But their every word sings within the magus's head.",
+      "Artist":"Wayne Reynolds",
+      "Number":"134",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":134741,
+      "Variations":null,
+      "ImageName":"magus of the library",
+      "Id":"2f42cb77826b88a5c239232850f202c9756bdc0c",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"134"
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Ghost Quarter",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "Flavor":"Deserted, but not uninhabited.",
+      "Artist":"Peter Mohrbacher",
+      "Number":"240",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":220371,
+      "Variations":null,
+      "ImageName":"ghost quarter",
+      "Id":"4ade34a627608cd69a9e51da96fe001a1e364192",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"240"
+   },
+   {  
+      "Name":"Spawning Bed",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{6}, {T}, Sacrifice Spawning Bed: Create three 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "Flavor":"Young Eldrazi crawl forth from the dust, compelled by a greater will.",
+      "Artist":"Jason Felix",
+      "Number":"248",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":402046,
+      "Variations":null,
+      "ImageName":"spawning bed",
+      "Id":"26ed21c9d5a751d223f413d9fc924c3802c0352d",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"248"
+   }
+]</value>
+  </data>
+  <data name="Desolation" xml:space="preserve">
+    <value>[  
+   {  
+      "Name":"Nissa, Steward of Elements",
+      "Names":null,
+      "ManaCost":"{X}{G}{U}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Blue",
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "U",
+         "G"
+      ],
+      "Type":"Legendary Planeswalker — Nissa",
+      "Supertypes":[  
+         "Legendary"
+      ],
+      "Types":[  
+         "Planeswalker"
+      ],
+      "Subtypes":[  
+         "Nissa"
+      ],
+      "Rarity":"Mythic Rare",
+      "Text":"+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with converted mana cost less than or equal to the number of loyalty counters on Nissa, Steward of Elements, you may put that card onto the battlefield.\n−6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
+      "Flavor":null,
+      "Artist":"Howard Lyon",
+      "Number":"204",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":426906,
+      "Variations":null,
+      "ImageName":"nissa, steward of elements",
+      "Id":"ef0f21656a32fcd086819e0197855c3389360372",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"204"
+   },
+   {  
+      "Name":"Bane of Bala Ged",
+      "Names":null,
+      "ManaCost":"{7}",
+      "Cmc":7.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Whenever Bane of Bala Ged attacks, defending player exiles two permanents he or she controls.",
+      "Flavor":"The continent of Bala Ged was ravaged by massive Eldrazi of Ulamog's lineage, its lush jungles and cascading rivers reduced to dust.",
+      "Artist":"Chase Stone",
+      "Number":"1",
+      "Power":"7",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401814,
+      "Variations":null,
+      "ImageName":"bane of bala ged",
+      "Id":"b2baccd791f5ada8bbd505f11bf81e70c8ea27ab",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"1"
+   },
+   {  
+      "Name":"Deceiver of Form",
+      "Names":null,
+      "ManaCost":"{6}{C}",
+      "Cmc":7.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"({C} represents colorless mana.)\nAt the beginning of combat on your turn, reveal the top card of your library. If a creature card is revealed this way, you may have creatures you control other than Deceiver of Form become copies of that card until end of turn. You may put that card on the bottom of your library.",
+      "Flavor":null,
+      "Artist":"Viktor Titov",
+      "Number":"1",
+      "Power":"8",
+      "Toughness":"8",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407511,
+      "Variations":null,
+      "ImageName":"deceiver of form",
+      "Id":"4f803ca297853251e10ec17cf897ebc453b73f0a",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"1"
+   },
+   {  
+      "Name":"Conduit of Ruin",
+      "Names":null,
+      "ManaCost":"{6}",
+      "Cmc":6.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"When you cast Conduit of Ruin, you may search your library for a colorless creature card with converted mana cost 7 or greater, reveal it, then shuffle your library and put that card on top of it.\nThe first creature spell you cast each turn costs {2} less to cast.",
+      "Flavor":null,
+      "Artist":"Slawomir Maniak",
+      "Number":"4",
+      "Power":"5",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401847,
+      "Variations":null,
+      "ImageName":"conduit of ruin",
+      "Id":"868caad6f96eea7410a71142a4dfe0d79ade3836",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"4"
+   },
+   {  
+      "Name":"Endbringer",
+      "Names":null,
+      "ManaCost":"{5}{C}",
+      "Cmc":6.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"Untap Endbringer during each other player's untap step.\n{T}: Endbringer deals 1 damage to target creature or player.\n{C}, {T}: Target creature can't attack or block this turn.\n{C}{C}, {T}: Draw a card.",
+      "Flavor":null,
+      "Artist":"Vincent Proce",
+      "Number":"3",
+      "Power":"5",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407513,
+      "Variations":null,
+      "ImageName":"endbringer",
+      "Id":"0945336e9bd30c755b1a87f16b74556f16f5564e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"3"
+   },
+   {  
+      "Name":"Endbringer",
+      "Names":null,
+      "ManaCost":"{5}{C}",
+      "Cmc":6.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"Untap Endbringer during each other player's untap step.\n{T}: Endbringer deals 1 damage to target creature or player.\n{C}, {T}: Target creature can't attack or block this turn.\n{C}{C}, {T}: Draw a card.",
+      "Flavor":null,
+      "Artist":"Vincent Proce",
+      "Number":"3",
+      "Power":"5",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407513,
+      "Variations":null,
+      "ImageName":"endbringer",
+      "Id":"0945336e9bd30c755b1a87f16b74556f16f5564e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"3"
+   },
+   {  
+      "Name":"Endbringer",
+      "Names":null,
+      "ManaCost":"{5}{C}",
+      "Cmc":6.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"Untap Endbringer during each other player's untap step.\n{T}: Endbringer deals 1 damage to target creature or player.\n{C}, {T}: Target creature can't attack or block this turn.\n{C}{C}, {T}: Draw a card.",
+      "Flavor":null,
+      "Artist":"Vincent Proce",
+      "Number":"3",
+      "Power":"5",
+      "Toughness":"5",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407513,
+      "Variations":null,
+      "ImageName":"endbringer",
+      "Id":"0945336e9bd30c755b1a87f16b74556f16f5564e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"3"
+   },
+   {  
+      "Name":"Deepfathom Skulker",
+      "Names":null,
+      "ManaCost":"{5}{U}",
+      "Cmc":6.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"Devoid (This card has no color.)\nWhenever a creature you control deals combat damage to a player, you may draw a card.\n{3}{C}: Target creature can't be blocked this turn. ({C} represents colorless mana.)",
+      "Flavor":null,
+      "Artist":"Joseph Meehan",
+      "Number":"43",
+      "Power":"4",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407553,
+      "Variations":null,
+      "ImageName":"deepfathom skulker",
+      "Id":"98a093d41efbf6b4e12bccf29c40bf9d863995df",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"43"
+   },
+   {  
+      "Name":"Thought-Knot Seer",
+      "Names":null,
+      "ManaCost":"{3}{C}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"({C} represents colorless mana.)\nWhen Thought-Knot Seer enters the battlefield, target opponent reveals his or her hand. You choose a nonland card from it and exile that card.\nWhen Thought-Knot Seer leaves the battlefield, target opponent draws a card.",
+      "Flavor":null,
+      "Artist":"Svetlin Velinov",
+      "Number":"9",
+      "Power":"4",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407519,
+      "Variations":null,
+      "ImageName":"thought-knot seer",
+      "Id":"43cfeb9d9fbd9235787eb21d7ff7e4c4613d037f",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"9"
+   },
+   {  
+      "Name":"Elvish Spirit Guide",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Spirit",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Spirit"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "Flavor":"\"We are never without guidance, if we but seek it.\"\n—Taaveti of Kelsinko, Elvish Hunter",
+      "Artist":"Julie Baroh",
+      "Number":null,
+      "Power":"2",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3134,
+      "Variations":null,
+      "ImageName":"elvish spirit guide",
+      "Id":"f6f2ce78ff61260f319050a2c5b6b86323fff6d5",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"69"
+   },
+   {  
+      "Name":"Elvish Spirit Guide",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Spirit",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Spirit"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "Flavor":"\"We are never without guidance, if we but seek it.\"\n—Taaveti of Kelsinko, Elvish Hunter",
+      "Artist":"Julie Baroh",
+      "Number":null,
+      "Power":"2",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3134,
+      "Variations":null,
+      "ImageName":"elvish spirit guide",
+      "Id":"f6f2ce78ff61260f319050a2c5b6b86323fff6d5",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"69"
+   },
+   {  
+      "Name":"Elvish Spirit Guide",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Spirit",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Spirit"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "Flavor":"\"We are never without guidance, if we but seek it.\"\n—Taaveti of Kelsinko, Elvish Hunter",
+      "Artist":"Julie Baroh",
+      "Number":null,
+      "Power":"2",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3134,
+      "Variations":null,
+      "ImageName":"elvish spirit guide",
+      "Id":"f6f2ce78ff61260f319050a2c5b6b86323fff6d5",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"69"
+   },
+   {  
+      "Name":"Elvish Spirit Guide",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Spirit",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Spirit"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "Flavor":"\"We are never without guidance, if we but seek it.\"\n—Taaveti of Kelsinko, Elvish Hunter",
+      "Artist":"Julie Baroh",
+      "Number":null,
+      "Power":"2",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3134,
+      "Variations":null,
+      "ImageName":"elvish spirit guide",
+      "Id":"f6f2ce78ff61260f319050a2c5b6b86323fff6d5",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"69"
+   },
+   {  
+      "Name":"Void Grafter",
+      "Names":null,
+      "ManaCost":"{1}{G}{U}",
+      "Cmc":3.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U",
+         "G"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\nFlash (You may cast this spell any time you could cast an instant.)\nWhen Void Grafter enters the battlefield, another target creature you control gains hexproof until end of turn.",
+      "Flavor":null,
+      "Artist":"Alejandro Mirabal",
+      "Number":"150",
+      "Power":"2",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407660,
+      "Variations":null,
+      "ImageName":"void grafter",
+      "Id":"6eac858184fededdb64a6ebface7dde8e41eaaa2",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"150"
+   },
+   {  
+      "Name":"Void Grafter",
+      "Names":null,
+      "ManaCost":"{1}{G}{U}",
+      "Cmc":3.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U",
+         "G"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\nFlash (You may cast this spell any time you could cast an instant.)\nWhen Void Grafter enters the battlefield, another target creature you control gains hexproof until end of turn.",
+      "Flavor":null,
+      "Artist":"Alejandro Mirabal",
+      "Number":"150",
+      "Power":"2",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407660,
+      "Variations":null,
+      "ImageName":"void grafter",
+      "Id":"6eac858184fededdb64a6ebface7dde8e41eaaa2",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"150"
+   },
+   {  
+      "Name":"Void Grafter",
+      "Names":null,
+      "ManaCost":"{1}{G}{U}",
+      "Cmc":3.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U",
+         "G"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\nFlash (You may cast this spell any time you could cast an instant.)\nWhen Void Grafter enters the battlefield, another target creature you control gains hexproof until end of turn.",
+      "Flavor":null,
+      "Artist":"Alejandro Mirabal",
+      "Number":"150",
+      "Power":"2",
+      "Toughness":"4",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407660,
+      "Variations":null,
+      "ImageName":"void grafter",
+      "Id":"6eac858184fededdb64a6ebface7dde8e41eaaa2",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"150"
+   },
+   {  
+      "Name":"Magus of the Library",
+      "Names":null,
+      "ManaCost":"{G}{G}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Human Wizard",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Human",
+         "Wizard"
+      ],
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "Flavor":"The ancient books slowly crumbled, their secrets turning to dust. But their every word sings within the magus's head.",
+      "Artist":"Wayne Reynolds",
+      "Number":"134",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":134741,
+      "Variations":null,
+      "ImageName":"magus of the library",
+      "Id":"2f42cb77826b88a5c239232850f202c9756bdc0c",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"134"
+   },
+   {  
+      "Name":"Magus of the Library",
+      "Names":null,
+      "ManaCost":"{G}{G}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Human Wizard",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Human",
+         "Wizard"
+      ],
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "Flavor":"The ancient books slowly crumbled, their secrets turning to dust. But their every word sings within the magus's head.",
+      "Artist":"Wayne Reynolds",
+      "Number":"134",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":134741,
+      "Variations":null,
+      "ImageName":"magus of the library",
+      "Id":"2f42cb77826b88a5c239232850f202c9756bdc0c",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"134"
+   },
+   {  
+      "Name":"Magus of the Library",
+      "Names":null,
+      "ManaCost":"{G}{G}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Human Wizard",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Human",
+         "Wizard"
+      ],
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "Flavor":"The ancient books slowly crumbled, their secrets turning to dust. But their every word sings within the magus's head.",
+      "Artist":"Wayne Reynolds",
+      "Number":"134",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":134741,
+      "Variations":null,
+      "ImageName":"magus of the library",
+      "Id":"2f42cb77826b88a5c239232850f202c9756bdc0c",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"134"
+   },
+   {  
+      "Name":"Magus of the Library",
+      "Names":null,
+      "ManaCost":"{G}{G}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Human Wizard",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Human",
+         "Wizard"
+      ],
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "Flavor":"The ancient books slowly crumbled, their secrets turning to dust. But their every word sings within the magus's head.",
+      "Artist":"Wayne Reynolds",
+      "Number":"134",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":134741,
+      "Variations":null,
+      "ImageName":"magus of the library",
+      "Id":"2f42cb77826b88a5c239232850f202c9756bdc0c",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"134"
+   },
+   {  
+      "Name":"Desolation Twin",
+      "Names":null,
+      "ManaCost":"{10}",
+      "Cmc":10.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Creature — Eldrazi",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi"
+      ],
+      "Rarity":"Rare",
+      "Text":"When you cast Desolation Twin, create a 10/10 colorless Eldrazi creature token.",
+      "Flavor":"\"With precise coordination and enough blood spilled, one can be driven off, even brought down. But two . . . that's a lot of blood.\"—Munda, ambush leader",
+      "Artist":"Jack Wang",
+      "Number":"6",
+      "Power":"10",
+      "Toughness":"10",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401857,
+      "Variations":null,
+      "ImageName":"desolation twin",
+      "Id":"f0b4e021ba27f493ec566b0eca488718fc178883",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"6"
+   },
+   {  
+      "Name":"Llanowar Elves",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"One bone broken for every twig snapped underfoot.\n—Llanowar penalty for trespassing",
+      "Artist":"Kev Walker",
+      "Number":"182",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":221892,
+      "Variations":null,
+      "ImageName":"llanowar elves",
+      "Id":"1a8c7be4fbe4fd0d1a5224506fa8f0978afe567e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"182"
+   },
+   {  
+      "Name":"Llanowar Elves",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"One bone broken for every twig snapped underfoot.\n—Llanowar penalty for trespassing",
+      "Artist":"Kev Walker",
+      "Number":"182",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":221892,
+      "Variations":null,
+      "ImageName":"llanowar elves",
+      "Id":"1a8c7be4fbe4fd0d1a5224506fa8f0978afe567e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"182"
+   },
+   {  
+      "Name":"Llanowar Elves",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"One bone broken for every twig snapped underfoot.\n—Llanowar penalty for trespassing",
+      "Artist":"Kev Walker",
+      "Number":"182",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":221892,
+      "Variations":null,
+      "ImageName":"llanowar elves",
+      "Id":"1a8c7be4fbe4fd0d1a5224506fa8f0978afe567e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"182"
+   },
+   {  
+      "Name":"Llanowar Elves",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"One bone broken for every twig snapped underfoot.\n—Llanowar penalty for trespassing",
+      "Artist":"Kev Walker",
+      "Number":"182",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":221892,
+      "Variations":null,
+      "ImageName":"llanowar elves",
+      "Id":"1a8c7be4fbe4fd0d1a5224506fa8f0978afe567e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"182"
+   },
+   {  
+      "Name":"Prophet of Distortion",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\n{3}{C}: Draw a card. ({C} represents colorless mana.)",
+      "Flavor":"It doesn't twist words. It twists worlds.",
+      "Artist":"Lius Lasahido",
+      "Number":"46",
+      "Power":"1",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407556,
+      "Variations":null,
+      "ImageName":"prophet of distortion",
+      "Id":"1f9205376bbc468db1f2bacb12436a61caf1a777",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"46"
+   },
+   {  
+      "Name":"Prophet of Distortion",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\n{3}{C}: Draw a card. ({C} represents colorless mana.)",
+      "Flavor":"It doesn't twist words. It twists worlds.",
+      "Artist":"Lius Lasahido",
+      "Number":"46",
+      "Power":"1",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407556,
+      "Variations":null,
+      "ImageName":"prophet of distortion",
+      "Id":"1f9205376bbc468db1f2bacb12436a61caf1a777",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"46"
+   },
+   {  
+      "Name":"Prophet of Distortion",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\n{3}{C}: Draw a card. ({C} represents colorless mana.)",
+      "Flavor":"It doesn't twist words. It twists worlds.",
+      "Artist":"Lius Lasahido",
+      "Number":"46",
+      "Power":"1",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407556,
+      "Variations":null,
+      "ImageName":"prophet of distortion",
+      "Id":"1f9205376bbc468db1f2bacb12436a61caf1a777",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"46"
+   },
+   {  
+      "Name":"Prophet of Distortion",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Creature — Eldrazi Drone",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Eldrazi",
+         "Drone"
+      ],
+      "Rarity":"Uncommon",
+      "Text":"Devoid (This card has no color.)\n{3}{C}: Draw a card. ({C} represents colorless mana.)",
+      "Flavor":"It doesn't twist words. It twists worlds.",
+      "Artist":"Lius Lasahido",
+      "Number":"46",
+      "Power":"1",
+      "Toughness":"2",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407556,
+      "Variations":null,
+      "ImageName":"prophet of distortion",
+      "Id":"1f9205376bbc468db1f2bacb12436a61caf1a777",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"46"
+   },
+   {  
+      "Name":"Hedron Archive",
+      "Names":null,
+      "ManaCost":"{4}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C}{C} to your mana pool.\n{2}, {T}, Sacrifice Hedron Archive: Draw two cards.",
+      "Flavor":"\"You've begun to understand the hedrons' true purpose,\" said Ugin. \"The Eldrazi can be imprisoned.\"\"And how did that work out last time?\" asked Jace.",
+      "Artist":"Craig J Spearing",
+      "Number":"223",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401910,
+      "Variations":null,
+      "ImageName":"hedron archive",
+      "Id":"26338d6e3c7ee589f1fc43a26365a4a3325aad8e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"223"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Spatial Contortion",
+      "Names":null,
+      "ManaCost":"{1}{C}",
+      "Cmc":2.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"({C} represents colorless mana.)\nTarget creature gets +3/-3 until end of turn.",
+      "Flavor":"\"For those without the Planeswalker spark, the merest touch of the Blind Eternities can kill.\"\n—Ugin",
+      "Artist":"Daarken",
+      "Number":"8",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407518,
+      "Variations":null,
+      "ImageName":"spatial contortion",
+      "Id":"9077916b245444435d9a9c06f31f5681e0a66020",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"8"
+   },
+   {  
+      "Name":"Spatial Contortion",
+      "Names":null,
+      "ManaCost":"{1}{C}",
+      "Cmc":2.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"({C} represents colorless mana.)\nTarget creature gets +3/-3 until end of turn.",
+      "Flavor":"\"For those without the Planeswalker spark, the merest touch of the Blind Eternities can kill.\"\n—Ugin",
+      "Artist":"Daarken",
+      "Number":"8",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407518,
+      "Variations":null,
+      "ImageName":"spatial contortion",
+      "Id":"9077916b245444435d9a9c06f31f5681e0a66020",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"8"
+   },
+   {  
+      "Name":"Spatial Contortion",
+      "Names":null,
+      "ManaCost":"{1}{C}",
+      "Cmc":2.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"({C} represents colorless mana.)\nTarget creature gets +3/-3 until end of turn.",
+      "Flavor":"\"For those without the Planeswalker spark, the merest touch of the Blind Eternities can kill.\"\n—Ugin",
+      "Artist":"Daarken",
+      "Number":"8",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407518,
+      "Variations":null,
+      "ImageName":"spatial contortion",
+      "Id":"9077916b245444435d9a9c06f31f5681e0a66020",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"8"
+   },
+   {  
+      "Name":"Worldly Tutor",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"Search your library for a creature card and reveal that card. Shuffle your library, then put the card on top of it.",
+      "Flavor":"\"Aselbo soon had the rhino eating from his palm and the snake waiting at his heels.\"\n—Afari, Tales",
+      "Artist":"David O'Connor",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3424,
+      "Variations":null,
+      "ImageName":"worldly tutor",
+      "Id":"e466afab05374e4dc2039650e42114130ce89589",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"153"
+   },
+   {  
+      "Name":"Worldly Tutor",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"Search your library for a creature card and reveal that card. Shuffle your library, then put the card on top of it.",
+      "Flavor":"\"Aselbo soon had the rhino eating from his palm and the snake waiting at his heels.\"\n—Afari, Tales",
+      "Artist":"David O'Connor",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3424,
+      "Variations":null,
+      "ImageName":"worldly tutor",
+      "Id":"e466afab05374e4dc2039650e42114130ce89589",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"153"
+   },
+   {  
+      "Name":"Worldly Tutor",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"Search your library for a creature card and reveal that card. Shuffle your library, then put the card on top of it.",
+      "Flavor":"\"Aselbo soon had the rhino eating from his palm and the snake waiting at his heels.\"\n—Afari, Tales",
+      "Artist":"David O'Connor",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":3424,
+      "Variations":null,
+      "ImageName":"worldly tutor",
+      "Id":"e466afab05374e4dc2039650e42114130ce89589",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"153"
+   },
+   {  
+      "Name":"Lotus Petal",
+      "Names":null,
+      "ManaCost":"{0}",
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Special",
+      "Text":"{T}, Sacrifice Lotus Petal: Add one mana of any color to your mana pool.",
+      "Flavor":"Each of these intricate mechanical petals stores enough power to supply all of Ghirapur, if only for a fleeting moment.",
+      "Artist":"Slawomir Maniak",
+      "Number":"15",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":420602,
+      "Variations":null,
+      "ImageName":"lotus petal",
+      "Id":"918aa0f2704c7e02f33e0ea7087c219bdbe22d4a",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"15"
+   },
+   {  
+      "Name":"Lotus Petal",
+      "Names":null,
+      "ManaCost":"{0}",
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Special",
+      "Text":"{T}, Sacrifice Lotus Petal: Add one mana of any color to your mana pool.",
+      "Flavor":"Each of these intricate mechanical petals stores enough power to supply all of Ghirapur, if only for a fleeting moment.",
+      "Artist":"Slawomir Maniak",
+      "Number":"15",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":420602,
+      "Variations":null,
+      "ImageName":"lotus petal",
+      "Id":"918aa0f2704c7e02f33e0ea7087c219bdbe22d4a",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"15"
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Ghost Quarter",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "Flavor":"Deserted, but not uninhabited.",
+      "Artist":"Peter Mohrbacher",
+      "Number":"240",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":220371,
+      "Variations":null,
+      "ImageName":"ghost quarter",
+      "Id":"4ade34a627608cd69a9e51da96fe001a1e364192",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"240"
+   },
+   {  
+      "Name":"Ghost Quarter",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "Flavor":"Deserted, but not uninhabited.",
+      "Artist":"Peter Mohrbacher",
+      "Number":"240",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":220371,
+      "Variations":null,
+      "ImageName":"ghost quarter",
+      "Id":"4ade34a627608cd69a9e51da96fe001a1e364192",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"240"
+   },
+   {  
+      "Name":"Ghost Quarter",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "Flavor":"Deserted, but not uninhabited.",
+      "Artist":"Peter Mohrbacher",
+      "Number":"240",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":220371,
+      "Variations":null,
+      "ImageName":"ghost quarter",
+      "Id":"4ade34a627608cd69a9e51da96fe001a1e364192",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"240"
+   },
+   {  
+      "Name":"Mishra's Factory",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "Flavor":null,
+      "Artist":"Kaja &amp; Phil Foglio",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":1071,
+      "Variations":[  
+         "1072",
+         "1074",
+         "1073"
+      ],
+      "ImageName":"mishra's factory3",
+      "Id":"308fdb93ab2b714372c965baccafde1f49aa58e6",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Mishra's Factory",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "Flavor":null,
+      "Artist":"Kaja &amp; Phil Foglio",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":1071,
+      "Variations":[  
+         "1072",
+         "1074",
+         "1073"
+      ],
+      "ImageName":"mishra's factory3",
+      "Id":"308fdb93ab2b714372c965baccafde1f49aa58e6",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Mishra's Factory",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Rare",
+      "Text":"{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "Flavor":null,
+      "Artist":"Kaja &amp; Phil Foglio",
+      "Number":null,
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":1071,
+      "Variations":[  
+         "1072",
+         "1074",
+         "1073"
+      ],
+      "ImageName":"mishra's factory3",
+      "Id":"308fdb93ab2b714372c965baccafde1f49aa58e6",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Spawning Bed",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C} to your mana pool.\n{6}, {T}, Sacrifice Spawning Bed: Create three 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "Flavor":"Young Eldrazi crawl forth from the dust, compelled by a greater will.",
+      "Artist":"Jason Felix",
+      "Number":"248",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":402046,
+      "Variations":null,
+      "ImageName":"spawning bed",
+      "Id":"26ed21c9d5a751d223f413d9fc924c3802c0352d",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"248"
+   },
+   {  
+      "Name":"Unclaimed Territory",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Land",
+      "Supertypes":null,
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"As Unclaimed Territory enters the battlefield, choose a creature type.\n{T}: Add {C} to your mana pool.\n{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell of the chosen type.",
+      "Flavor":null,
+      "Artist":"Dimitar",
+      "Number":"258",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":435419,
+      "Variations":null,
+      "ImageName":"unclaimed territory",
+      "Id":"80105de3d6b884295a4a7ebf7cc72aae3de5fb6f",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"258"
+   }
+]</value>
+  </data>
+  <data name="SampleWithAftermathLayout" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="SimpleSample" xml:space="preserve">
+    <value>[  
+   {  
+      "Name":"Nissa, Steward of Elements",
+      "Names":null,
+      "ManaCost":"{X}{G}{U}",
+      "Cmc":2.0,
+      "Colors":[  
+         "Blue",
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "U",
+         "G"
+      ],
+      "Type":"Legendary Planeswalker — Nissa",
+      "Supertypes":[  
+         "Legendary"
+      ],
+      "Types":[  
+         "Planeswalker"
+      ],
+      "Subtypes":[  
+         "Nissa"
+      ],
+      "Rarity":"Mythic Rare",
+      "Text":"+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with converted mana cost less than or equal to the number of loyalty counters on Nissa, Steward of Elements, you may put that card onto the battlefield.\n−6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
+      "Flavor":null,
+      "Artist":"Howard Lyon",
+      "Number":"204",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":426906,
+      "Variations":null,
+      "ImageName":"nissa, steward of elements",
+      "Id":"ef0f21656a32fcd086819e0197855c3389360372",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"204"
+   },
+   {  
+      "Name":"Elvish Mystic",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"\"Life grows everywhere. My kin merely find those places where it grows strongest.\"\n—Nissa Revane",
+      "Artist":"Wesley Burt",
+      "Number":"173",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":383229,
+      "Variations":null,
+      "ImageName":"elvish mystic",
+      "Id":"ed37abec3dac911ce8da502d86fe1e44bfc88ebd",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"173"
+   },
+   {  
+      "Name":"Elvish Mystic",
+      "Names":null,
+      "ManaCost":"{G}",
+      "Cmc":1.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Creature — Elf Druid",
+      "Supertypes":null,
+      "Types":[  
+         "Creature"
+      ],
+      "Subtypes":[  
+         "Elf",
+         "Druid"
+      ],
+      "Rarity":"Common",
+      "Text":"{T}: Add {G} to your mana pool.",
+      "Flavor":"\"Life grows everywhere. My kin merely find those places where it grows strongest.\"\n—Nissa Revane",
+      "Artist":"Wesley Burt",
+      "Number":"173",
+      "Power":"1",
+      "Toughness":"1",
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":383229,
+      "Variations":null,
+      "ImageName":"elvish mystic",
+      "Id":"ed37abec3dac911ce8da502d86fe1e44bfc88ebd",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"173"
+   },
+   {  
+      "Name":"Hedron Archive",
+      "Names":null,
+      "ManaCost":"{4}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C}{C} to your mana pool.\n{2}, {T}, Sacrifice Hedron Archive: Draw two cards.",
+      "Flavor":"\"You've begun to understand the hedrons' true purpose,\" said Ugin. \"The Eldrazi can be imprisoned.\"\"And how did that work out last time?\" asked Jace.",
+      "Artist":"Craig J Spearing",
+      "Number":"223",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401910,
+      "Variations":null,
+      "ImageName":"hedron archive",
+      "Id":"26338d6e3c7ee589f1fc43a26365a4a3325aad8e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"223"
+   },
+   {  
+      "Name":"Hedron Archive",
+      "Names":null,
+      "ManaCost":"{4}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C}{C} to your mana pool.\n{2}, {T}, Sacrifice Hedron Archive: Draw two cards.",
+      "Flavor":"\"You've begun to understand the hedrons' true purpose,\" said Ugin. \"The Eldrazi can be imprisoned.\"\"And how did that work out last time?\" asked Jace.",
+      "Artist":"Craig J Spearing",
+      "Number":"223",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401910,
+      "Variations":null,
+      "ImageName":"hedron archive",
+      "Id":"26338d6e3c7ee589f1fc43a26365a4a3325aad8e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"223"
+   },
+   {  
+      "Name":"Hedron Archive",
+      "Names":null,
+      "ManaCost":"{4}",
+      "Cmc":4.0,
+      "Colors":null,
+      "ColorIdentity":null,
+      "Type":"Artifact",
+      "Supertypes":null,
+      "Types":[  
+         "Artifact"
+      ],
+      "Subtypes":null,
+      "Rarity":"Uncommon",
+      "Text":"{T}: Add {C}{C} to your mana pool.\n{2}, {T}, Sacrifice Hedron Archive: Draw two cards.",
+      "Flavor":"\"You've begun to understand the hedrons' true purpose,\" said Ugin. \"The Eldrazi can be imprisoned.\"\"And how did that work out last time?\" asked Jace.",
+      "Artist":"Craig J Spearing",
+      "Number":"223",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":401910,
+      "Variations":null,
+      "ImageName":"hedron archive",
+      "Id":"26338d6e3c7ee589f1fc43a26365a4a3325aad8e",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"223"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Pulse of Murasa",
+      "Names":null,
+      "ManaCost":"{2}{G}",
+      "Cmc":3.0,
+      "Colors":[  
+         "Green"
+      ],
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Instant",
+      "Supertypes":null,
+      "Types":[  
+         "Instant"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "Flavor":"\"Little flower twirl and bloom, arise from this your rocky tomb. Little warrior slash and brawl, be born again to free us all.\"",
+      "Artist":"Matt Stewart",
+      "Number":"141",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407651,
+      "Variations":null,
+      "ImageName":"pulse of murasa",
+      "Id":"03acd4f5d8ead29e7f746da65a1819ca9f73da0b",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"141"
+   },
+   {  
+      "Name":"Slip Through Space",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Sorcery",
+      "Supertypes":null,
+      "Types":[  
+         "Sorcery"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "Flavor":"The Eldrazi twisted in a direction that had no name, and a frontal assault became a panicked rout.",
+      "Artist":"Raymond Swanland",
+      "Number":"47",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407557,
+      "Variations":null,
+      "ImageName":"slip through space",
+      "Id":"51248357802f2e6670cb66707fc166448e47e371",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"47"
+   },
+   {  
+      "Name":"Slip Through Space",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Sorcery",
+      "Supertypes":null,
+      "Types":[  
+         "Sorcery"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "Flavor":"The Eldrazi twisted in a direction that had no name, and a frontal assault became a panicked rout.",
+      "Artist":"Raymond Swanland",
+      "Number":"47",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407557,
+      "Variations":null,
+      "ImageName":"slip through space",
+      "Id":"51248357802f2e6670cb66707fc166448e47e371",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"47"
+   },
+   {  
+      "Name":"Slip Through Space",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Sorcery",
+      "Supertypes":null,
+      "Types":[  
+         "Sorcery"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "Flavor":"The Eldrazi twisted in a direction that had no name, and a frontal assault became a panicked rout.",
+      "Artist":"Raymond Swanland",
+      "Number":"47",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407557,
+      "Variations":null,
+      "ImageName":"slip through space",
+      "Id":"51248357802f2e6670cb66707fc166448e47e371",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"47"
+   },
+   {  
+      "Name":"Slip Through Space",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Sorcery",
+      "Supertypes":null,
+      "Types":[  
+         "Sorcery"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "Flavor":"The Eldrazi twisted in a direction that had no name, and a frontal assault became a panicked rout.",
+      "Artist":"Raymond Swanland",
+      "Number":"47",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407557,
+      "Variations":null,
+      "ImageName":"slip through space",
+      "Id":"51248357802f2e6670cb66707fc166448e47e371",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"47"
+   },
+   {  
+      "Name":"Slip Through Space",
+      "Names":null,
+      "ManaCost":"{U}",
+      "Cmc":1.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Sorcery",
+      "Supertypes":null,
+      "Types":[  
+         "Sorcery"
+      ],
+      "Subtypes":null,
+      "Rarity":"Common",
+      "Text":"Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "Flavor":"The Eldrazi twisted in a direction that had no name, and a frontal assault became a panicked rout.",
+      "Artist":"Raymond Swanland",
+      "Number":"47",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":407557,
+      "Variations":null,
+      "ImageName":"slip through space",
+      "Id":"51248357802f2e6670cb66707fc166448e47e371",
+      "Watermark":null,
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":"47"
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Island",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "U"
+      ],
+      "Type":"Basic Land — Island",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Island"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"234",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195187,
+      "Variations":[  
+         "195170",
+         "195165",
+         "201966",
+         "201964",
+         "201963",
+         "201965",
+         "195161"
+      ],
+      "ImageName":"island1",
+      "Id":"2555847cb4b4867a56c8e75d3a0c8cd8a4b628f7",
+      "Watermark":"Blue",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   },
+   {  
+      "Name":"Forest",
+      "Names":null,
+      "ManaCost":null,
+      "Cmc":0.0,
+      "Colors":null,
+      "ColorIdentity":[  
+         "G"
+      ],
+      "Type":"Basic Land — Forest",
+      "Supertypes":[  
+         "Basic"
+      ],
+      "Types":[  
+         "Land"
+      ],
+      "Subtypes":[  
+         "Forest"
+      ],
+      "Rarity":"Basic Land",
+      "Text":null,
+      "Flavor":null,
+      "Artist":"John Avon",
+      "Number":"246",
+      "Power":null,
+      "Toughness":null,
+      "Loyalty":null,
+      "Layout":"normal",
+      "Multiverseid":195158,
+      "Variations":[  
+         "201962",
+         "201960",
+         "195183",
+         "201961",
+         "195177",
+         "201959",
+         "195192"
+      ],
+      "ImageName":"forest1",
+      "Id":"cdc297573736c8a7e975830eb7c1b4029f0da3a6",
+      "Watermark":"Green",
+      "Border":null,
+      "Timeshifted":false,
+      "Hand":0,
+      "Life":0,
+      "Reserved":false,
+      "ReleaseDate":null,
+      "Starter":false,
+      "MciNumber":null
+   }
+]</value>
+  </data>
+</root>
