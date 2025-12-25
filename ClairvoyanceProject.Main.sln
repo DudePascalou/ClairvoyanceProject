@@ -22,6 +22,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clairvoyance.Services.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clairvoyance.Tests.Resources", "Clairvoyance.Tests.Resources\Clairvoyance.Tests.Resources.csproj", "{77D7803D-7988-482A-B5EF-DAA53EFC872F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{6EE22EB1-5BD9-48FC-9E4A-EB6A4D8B28D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clairvoyance.Collections.Domain", "Collections\Clairvoyance.Collections.Domain\Clairvoyance.Collections.Domain.csproj", "{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clairvoyance.Collections.CardHunter", "Collections\Clairvoyance.Collections.CardHunter\Clairvoyance.Collections.CardHunter.csproj", "{6719C576-B42F-450F-B7C8-2476A76BE105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clairvoyance.Collections.ConsoleApp", "Collections\Clairvoyance.Collections.ConsoleApp\Clairvoyance.Collections.ConsoleApp.csproj", "{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +60,18 @@ Global
 		{77D7803D-7988-482A-B5EF-DAA53EFC872F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D7803D-7988-482A-B5EF-DAA53EFC872F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77D7803D-7988-482A-B5EF-DAA53EFC872F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6719C576-B42F-450F-B7C8-2476A76BE105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6719C576-B42F-450F-B7C8-2476A76BE105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6719C576-B42F-450F-B7C8-2476A76BE105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6719C576-B42F-450F-B7C8-2476A76BE105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +80,9 @@ Global
 		{DF6083CE-F62B-4EC8-939C-A0FA38BE78CD} = {30BB7F1F-345C-4B4A-8F62-47BA0418E6B1}
 		{56070F53-4EF2-4858-BD99-9E41BBDF2482} = {30BB7F1F-345C-4B4A-8F62-47BA0418E6B1}
 		{77D7803D-7988-482A-B5EF-DAA53EFC872F} = {30BB7F1F-345C-4B4A-8F62-47BA0418E6B1}
+		{1BA6A65F-4AD7-4E77-87F1-6C3E6B5B0917} = {6EE22EB1-5BD9-48FC-9E4A-EB6A4D8B28D7}
+		{6719C576-B42F-450F-B7C8-2476A76BE105} = {6EE22EB1-5BD9-48FC-9E4A-EB6A4D8B28D7}
+		{9D4C5D31-0662-4E55-B9EE-D4519F6BA13A} = {6EE22EB1-5BD9-48FC-9E4A-EB6A4D8B28D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3807C40D-0856-4563-B573-3392A00B8B72}
