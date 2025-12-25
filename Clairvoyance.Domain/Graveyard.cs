@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
+﻿namespace Clairvoyance.Domain;
 
-namespace Clairvoyance.Domain
+public class Graveyard : CardSetBase, ICardSet
 {
-    public class Graveyard : CardSetBase, ICardSet
-    {
-        public Graveyard() : base()
-        { }
+    public Graveyard() : base()
+    { }
 
-        public Graveyard(IList<Card> cards) : base(cards)
-        { }
-    }
+    public Graveyard(IList<Card> cards) : base(cards)
+    { }
 }

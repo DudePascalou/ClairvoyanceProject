@@ -1,11 +1,5 @@
 ﻿using Clairvoyance.Domain;
-using Clairvoyance.Services.Properties;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Text.Json;
 
 namespace Clairvoyance.Services
 {
@@ -22,35 +16,35 @@ namespace Clairvoyance.Services
 
         public void LoadCardsDatabase()
         {
-            var filePath = @"C:\Users\PC\Documents\GitHub\mtgtools\mtgtools\Data\LightSets-x.json"; // TODO : find another way to load cards...
-            var jsonFileContent = File.ReadAllText(filePath);
-            dynamic dynSets = JsonConvert.DeserializeObject(jsonFileContent);
-            IDictionary<string, JToken> jsonSets = dynSets;
+            //var filePath = @"C:\Users\PC\Documents\GitHub\mtgtools\mtgtools\Data\LightSets-x.json"; // TODO : find another way to load cards...
+            //var jsonFileContent = File.ReadAllText(filePath);
+            //dynamic dynSets = JsonSerializer.Deserialize(jsonFileContent);
+            //IDictionary<string, JToken> jsonSets = dynSets;
 
-            foreach (var jsonSet in jsonSets)
-            {
-                var set = JsonConvert.DeserializeObject<Set>(jsonSet.Value.ToString());
-                if (set != null)
-                {
-                    _sets.Add(set);
-                    foreach (var card in set.Cards)
-                    {
-                        if (!_cardsByName.ContainsKey(card.Name))
-                        {
-                            _cardsByName.Add(card.Name, card);
-                        }
-                    }
-                }
-            }
+            //foreach (var jsonSet in jsonSets)
+            //{
+            //    var set = JsonConvert.DeserializeObject<Set>(jsonSet.Value.ToString());
+            //    if (set != null)
+            //    {
+            //        _sets.Add(set);
+            //        foreach (var card in set.Cards)
+            //        {
+            //            if (!_cardsByName.ContainsKey(card.Name))
+            //            {
+            //                _cardsByName.Add(card.Name, card);
+            //            }
+            //        }
+            //    }
+            //}
         }
 
-        public Card FindByName(string name)
+        public Card? FindByName(string name)
         {
-            if (_cardsByName.ContainsKey(name))
+            if (_cardsByName.TryGetValue(name, out Card? value))
             {
-                return _cardsByName[name];
+                return value;
             }
-            else if (name.Contains(Resources.AftermathSeparator))
+            else if (name.Contains("TODO AftermathSeparator"))
             {
                 // TODO : manage aftermath cards...
                 return null;
@@ -121,14 +115,14 @@ namespace Clairvoyance.Services
             return new Deck(name, format, cards, sideboardCards);
         }
 
-        public Card ParseCardJson(string cardJson)
+        public Card? ParseCardJson(string cardJson)
         {
-            return JsonConvert.DeserializeObject<Card>(cardJson);
+            return JsonSerializer.Deserialize<Card>(cardJson);
         }
 
         public Deck ParseDeckListJson(string name, Format format, string deckListJson)
         {
-            var cards = JsonConvert.DeserializeObject<List<Card>>(deckListJson);
+            var cards = JsonSerializer.Deserialize<List<Card>>(deckListJson)!;
             var deck = new Deck(name, format, cards);
             return deck;
         }

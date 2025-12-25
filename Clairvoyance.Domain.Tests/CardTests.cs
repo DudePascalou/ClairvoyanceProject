@@ -1,157 +1,156 @@
-﻿using Clairvoyance.Domain.Abilities;
+﻿using AwesomeAssertions;
+using Clairvoyance.Domain.Abilities;
 using Clairvoyance.Tests.Resources;
 using NUnit.Framework;
 
-namespace Clairvoyance.Domain.Tests
+namespace Clairvoyance.Domain.Tests;
+
+[TestFixture]
+public class CardTests
 {
-    [TestFixture]
-    public class CardTests
+    [Test]
+    public void CanTellIsAnArtifact()
     {
-        [Test]
-        public void CanTellIsAnArtifact()
-        {
-            // Arrange
-            var artifact = CardSamples.Artifact;
+        // Arrange
+        var artifact = CardSamples.Artifact;
 
-            // Act - Assert
-            Assert.IsTrue(artifact.IsAnArtifact);
-            Assert.IsFalse(artifact.IsACreature);
-            Assert.IsFalse(artifact.IsAnEnchantment);
-            Assert.IsFalse(artifact.IsAnInstant);
-            Assert.IsFalse(artifact.IsALand);
-            Assert.IsFalse(artifact.IsAPlaneswalker);
-            Assert.IsFalse(artifact.IsASorcery);
-        }
+        // Act - Assert
+        artifact.IsAnArtifact.Should().BeTrue();
+        artifact.IsACreature.Should().BeFalse();
+        artifact.IsAnEnchantment.Should().BeFalse();
+        artifact.IsAnInstant.Should().BeFalse();
+        artifact.IsALand.Should().BeFalse();
+        artifact.IsAPlaneswalker.Should().BeFalse();
+        artifact.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsACreature()
-        {
-            // Arrange
-            var creature = CardSamples.Creature;
+    [Test]
+    public void CanTellIsACreature()
+    {
+        // Arrange
+        var creature = CardSamples.Creature;
 
-            // Act - Assert
-            Assert.IsFalse(creature.IsAnArtifact);
-            Assert.IsTrue(creature.IsACreature);
-            Assert.IsFalse(creature.IsAnEnchantment);
-            Assert.IsFalse(creature.IsAnInstant);
-            Assert.IsFalse(creature.IsALand);
-            Assert.IsFalse(creature.IsAPlaneswalker);
-            Assert.IsFalse(creature.IsASorcery);
-        }
+        // Act - Assert
+        creature.IsAnArtifact.Should().BeFalse();
+        creature.IsACreature.Should().BeTrue();
+        creature.IsAnEnchantment.Should().BeFalse();
+        creature.IsAnInstant.Should().BeFalse();
+        creature.IsALand.Should().BeFalse();
+        creature.IsAPlaneswalker.Should().BeFalse();
+        creature.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsAnEnchantment()
-        {
-            // Arrange
-            var enchantment = CardSamples.Enchantment;
+    [Test]
+    public void CanTellIsAnEnchantment()
+    {
+        // Arrange
+        var enchantment = CardSamples.Enchantment;
 
-            // Act - Assert
-            Assert.IsFalse(enchantment.IsAnArtifact);
-            Assert.IsFalse(enchantment.IsACreature);
-            Assert.IsTrue(enchantment.IsAnEnchantment);
-            Assert.IsFalse(enchantment.IsAnInstant);
-            Assert.IsFalse(enchantment.IsALand);
-            Assert.IsFalse(enchantment.IsAPlaneswalker);
-            Assert.IsFalse(enchantment.IsASorcery);
-        }
+        // Act - Assert
+        enchantment.IsAnArtifact.Should().BeFalse();
+        enchantment.IsACreature.Should().BeFalse();
+        enchantment.IsAnEnchantment.Should().BeTrue();
+        enchantment.IsAnInstant.Should().BeFalse();
+        enchantment.IsALand.Should().BeFalse();
+        enchantment.IsAPlaneswalker.Should().BeFalse();
+        enchantment.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsAnInstant()
-        {
-            // Arrange
-            var instant = CardSamples.Instant;
+    [Test]
+    public void CanTellIsAnInstant()
+    {
+        // Arrange
+        var instant = CardSamples.Instant;
 
-            // Act - Assert
-            Assert.IsFalse(instant.IsAnArtifact);
-            Assert.IsFalse(instant.IsACreature);
-            Assert.IsFalse(instant.IsAnEnchantment);
-            Assert.IsTrue(instant.IsAnInstant);
-            Assert.IsFalse(instant.IsALand);
-            Assert.IsFalse(instant.IsAPlaneswalker);
-            Assert.IsFalse(instant.IsASorcery);
-        }
+        // Act - Assert
+        instant.IsAnArtifact.Should().BeFalse();
+        instant.IsACreature.Should().BeFalse();
+        instant.IsAnEnchantment.Should().BeFalse();
+        instant.IsAnInstant.Should().BeTrue();
+        instant.IsALand.Should().BeFalse();
+        instant.IsAPlaneswalker.Should().BeFalse();
+        instant.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsALand()
-        {
-            // Arrange
-            var land = CardSamples.Land;
+    [Test]
+    public void CanTellIsALand()
+    {
+        // Arrange
+        var land = CardSamples.Land;
 
-            // Act - Assert
-            Assert.IsFalse(land.IsAnArtifact);
-            Assert.IsFalse(land.IsACreature);
-            Assert.IsFalse(land.IsAnEnchantment);
-            Assert.IsFalse(land.IsAnInstant);
-            Assert.IsTrue(land.IsALand);
-            Assert.IsFalse(land.IsAPlaneswalker);
-            Assert.IsFalse(land.IsASorcery);
-        }
+        // Act - Assert
+        land.IsAnArtifact.Should().BeFalse();
+        land.IsACreature.Should().BeFalse();
+        land.IsAnEnchantment.Should().BeFalse();
+        land.IsAnInstant.Should().BeFalse();
+        land.IsALand.Should().BeTrue();
+        land.IsAPlaneswalker.Should().BeFalse();
+        land.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsAPlaneswalker()
-        {
-            // Arrange
-            var planeswalker = CardSamples.Planeswalker;
+    [Test]
+    public void CanTellIsAPlaneswalker()
+    {
+        // Arrange
+        var planeswalker = CardSamples.Planeswalker;
 
-            // Act - Assert
-            Assert.IsFalse(planeswalker.IsAnArtifact);
-            Assert.IsFalse(planeswalker.IsACreature);
-            Assert.IsFalse(planeswalker.IsAnEnchantment);
-            Assert.IsFalse(planeswalker.IsAnInstant);
-            Assert.IsFalse(planeswalker.IsALand);
-            Assert.IsTrue(planeswalker.IsAPlaneswalker);
-            Assert.IsFalse(planeswalker.IsASorcery);
-        }
+        // Act - Assert
+        planeswalker.IsAnArtifact.Should().BeFalse();
+        planeswalker.IsACreature.Should().BeFalse();
+        planeswalker.IsAnEnchantment.Should().BeFalse();
+        planeswalker.IsAnInstant.Should().BeFalse();
+        planeswalker.IsALand.Should().BeFalse();
+        planeswalker.IsAPlaneswalker.Should().BeTrue();
+        planeswalker.IsASorcery.Should().BeFalse();
+    }
 
-        [Test]
-        public void CanTellIsASorcery()
-        {
-            // Arrange
-            var sorcery = CardSamples.Sorcery;
+    [Test]
+    public void CanTellIsASorcery()
+    {
+        // Arrange
+        var sorcery = CardSamples.Sorcery;
 
-            // Act - Assert
-            Assert.IsFalse(sorcery.IsAnArtifact);
-            Assert.IsFalse(sorcery.IsACreature);
-            Assert.IsFalse(sorcery.IsAnEnchantment);
-            Assert.IsFalse(sorcery.IsAnInstant);
-            Assert.IsFalse(sorcery.IsALand);
-            Assert.IsFalse(sorcery.IsAPlaneswalker);
-            Assert.IsTrue(sorcery.IsASorcery);
-        }
+        // Act - Assert
+        sorcery.IsAnArtifact.Should().BeFalse();
+        sorcery.IsACreature.Should().BeFalse();
+        sorcery.IsAnEnchantment.Should().BeFalse();
+        sorcery.IsAnInstant.Should().BeFalse();
+        sorcery.IsALand.Should().BeFalse();
+        sorcery.IsAPlaneswalker.Should().BeFalse();
+        sorcery.IsASorcery.Should().BeTrue();
+    }
 
-        [Test]
-        public void CanTellHasAbility()
-        {
-            // Arrange
-            var card = new Card();
+    [Test]
+    public void CanTellHasAbility()
+    {
+        // Arrange
+        var card = new Card();
 
-            // Assert
-            Assert.IsFalse(card.HasAbility<FlyingStaticAbility>());
-            Assert.IsFalse(card.HasAbility<SummoningSicknessStaticAbility>());
+        // Assert
+        card.HasAbility<FlyingStaticAbility>().Should().BeFalse();
+        card.HasAbility<SummoningSicknessStaticAbility>().Should().BeFalse();
 
-            card.Abilities.Add(new SummoningSicknessStaticAbility());
+        card.Abilities.Add(new SummoningSicknessStaticAbility());
 
-            // Act - Assert
-            Assert.IsFalse(card.HasAbility<FlyingStaticAbility>());
-            Assert.IsTrue(card.HasAbility<SummoningSicknessStaticAbility>());
-        }
+        // Act - Assert
+        card.HasAbility<FlyingStaticAbility>().Should().BeFalse();
+        card.HasAbility<SummoningSicknessStaticAbility>().Should().BeTrue();
+    }
 
-        [Test]
-        public void CanGetAbility()
-        {
-            // Arrange
-            var card = new Card();
+    [Test]
+    public void CanGetAbility()
+    {
+        // Arrange
+        var card = new Card();
 
-            // Assert
-            Assert.AreEqual(null, card.GetAbility<FlyingStaticAbility>());
-            Assert.AreEqual(null, card.GetAbility<SummoningSicknessStaticAbility>());
+        // Assert
+        card.GetAbility<FlyingStaticAbility>().Should().BeNull();
+        card.GetAbility<SummoningSicknessStaticAbility>().Should().BeNull();
 
-            card.Abilities.Add(new SummoningSicknessStaticAbility());
+        card.Abilities.Add(new SummoningSicknessStaticAbility());
 
-            // Act - Assert
-            Assert.AreEqual(null, card.GetAbility<FlyingStaticAbility>());
-            Assert.That(card.GetAbility<SummoningSicknessStaticAbility>(), Is.InstanceOf<SummoningSicknessStaticAbility>());
-        }
-
+        // Act - Assert
+        card.GetAbility<FlyingStaticAbility>().Should().BeNull();
+        card.GetAbility<SummoningSicknessStaticAbility>().Should().BeAssignableTo<SummoningSicknessStaticAbility>();
     }
 }

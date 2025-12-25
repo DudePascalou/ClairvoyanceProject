@@ -1,12 +1,11 @@
 ﻿using Clairvoyance.Domain.Conditions;
 
-namespace Clairvoyance.Domain.Abilities
+namespace Clairvoyance.Domain.Abilities;
+
+public abstract class StaticAbilityBase : AbilityBase, IStaticAbility
 {
-    public abstract class StaticAbilityBase : AbilityBase, IStaticAbility
-    {
-        public StaticAbilityBase()
-        { }
-        public StaticAbilityBase(ICondition condition) : base(condition)
-        { }
-    }
+    public StaticAbilityBase()
+    { }
+    public StaticAbilityBase(ICondition condition) : base(condition)
+    { }
 }

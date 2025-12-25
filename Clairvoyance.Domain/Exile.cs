@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
+﻿namespace Clairvoyance.Domain;
 
-namespace Clairvoyance.Domain
+public class Exile : CardSetBase, ICardSet
 {
-    public class Exile : CardSetBase, ICardSet
-    {
-        public Exile() : base()
-        { }
+    public Exile() : base()
+    { }
 
-        public Exile(IList<Card> cards) : base(cards)
-        { }
-    }
+    public Exile(IList<Card> cards) : base(cards)
+    { }
 }

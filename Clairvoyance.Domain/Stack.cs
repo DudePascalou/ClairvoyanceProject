@@ -1,28 +1,25 @@
-﻿using System.Collections.Generic;
+﻿namespace Clairvoyance.Domain;
 
-namespace Clairvoyance.Domain
+public class Stack
 {
-    public class Stack
+    public Stack<IStackable> SpellsOrEffects { get; set; }
+
+    public Stack()
     {
-        public Stack<IStackable> SpellsOrEffects { get; set; }
+        SpellsOrEffects = new Stack<IStackable>();
+    }
 
-        public Stack()
-        {
-            SpellsOrEffects = new Stack<IStackable>();
-        }
+    public void Put(IStackable spellOrEffect)
+    {
+        SpellsOrEffects.Push(spellOrEffect);
+    }
 
-        public void Put(IStackable spellOrEffect)
+    public void Resolves()
+    {
+        while (SpellsOrEffects.Peek() != null)
         {
-            SpellsOrEffects.Push(spellOrEffect);
-        }
-
-        public void Resolves()
-        {
-            while (SpellsOrEffects.Peek() != null)
-            {
-                var spellOfEffect = SpellsOrEffects.Pop();
-                spellOfEffect.Resolves();
-            }
+            var spellOfEffect = SpellsOrEffects.Pop();
+            spellOfEffect.Resolves();
         }
     }
 }

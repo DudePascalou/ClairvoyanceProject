@@ -1,60 +1,57 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 
-namespace Clairvoyance.Domain
+namespace Clairvoyance.Domain;
+
+public class CardSetBase : ICardSet
 {
-    public class CardSetBase : ICardSet
+    public ObservableCollection<Card> Cards { get; set; }
+    public bool HasLand { get { return Cards.Any(c => c.IsALand); } }
+
+    public CardSetBase() : this(new List<Card>())
+    { }
+
+    public CardSetBase(IList<Card> cards)
     {
-        public ObservableCollection<Card> Cards { get; set; }
-        public bool HasLand { get { return Cards.Any(c => c.IsALand); } }
+        Cards = new ObservableCollection<Card>(cards);// ?? throw new ArgumentNullException("cards");
+    }
 
-        public CardSetBase() : this(new List<Card>())
-        { }
+    public Card Get(string name)
+    {
+        return Cards.FirstOrDefault(c => c.Name == name);
+    }
 
-        public CardSetBase(IList<Card> cards)
-        {
-            Cards = new ObservableCollection<Card>(cards);// ?? throw new ArgumentNullException("cards");
-        }
+    public IEnumerable<Card> Artifacts()
+    {
+        return Cards.Where(c => c.IsAnArtifact);
+    }
 
-        public Card Get(string name)
-        {
-            return Cards.FirstOrDefault(c => c.Name == name); 
-        }
+    public IEnumerable<Card> Creatures()
+    {
+        return Cards.Where(c => c.IsACreature);
+    }
 
-        public IEnumerable<Card> Artifacts()
-        {
-            return Cards.Where(c => c.IsAnArtifact);
-        }
+    public IEnumerable<Card> Enchantments()
+    {
+        return Cards.Where(c => c.IsAnEnchantment);
+    }
 
-        public IEnumerable<Card> Creatures()
-        {
-            return Cards.Where(c => c.IsACreature);
-        }
+    public IEnumerable<Card> Instants()
+    {
+        return Cards.Where(c => c.IsAnInstant);
+    }
 
-        public IEnumerable<Card> Enchantments()
-        {
-            return Cards.Where(c => c.IsAnEnchantment);
-        }
+    public IEnumerable<Card> Lands()
+    {
+        return Cards.Where(c => c.IsALand);
+    }
 
-        public IEnumerable<Card> Instants()
-        {
-            return Cards.Where(c => c.IsAnInstant);
-        }
+    public IEnumerable<Card> Planeswalkers()
+    {
+        return Cards.Where(c => c.IsAPlaneswalker);
+    }
 
-        public IEnumerable<Card> Lands()
-        {
-            return Cards.Where(c => c.IsALand);
-        }
-
-        public IEnumerable<Card> Planeswalkers()
-        {
-            return Cards.Where(c => c.IsAPlaneswalker);
-        }
-
-        public IEnumerable<Card> Sorceries()
-        {
-            return Cards.Where(c => c.IsASorcery);
-        }
+    public IEnumerable<Card> Sorceries()
+    {
+        return Cards.Where(c => c.IsASorcery);
     }
 }

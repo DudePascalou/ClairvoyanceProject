@@ -1,10 +1,9 @@
 ﻿using Clairvoyance.Domain.Abilities;
 
-namespace Clairvoyance.Domain.Effects
+namespace Clairvoyance.Domain.Effects;
+
+public interface IEffect : IStackable
 {
-    public interface IEffect : IStackable
-    {
-        IAbility Ability { get; set; }
-        IEffect Clone();
-    }
+    IAbility Ability { get; set; }
+    IEffect Clone();
 }

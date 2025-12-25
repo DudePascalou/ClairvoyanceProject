@@ -1,7 +1,6 @@
-﻿namespace Clairvoyance.Domain
+﻿namespace Clairvoyance.Domain;
+
+public interface IStackable
 {
-    public interface IStackable
-    {
-        void Resolves();
-    }
+    void Resolves();
 }

@@ -1,23 +1,22 @@
-﻿namespace Clairvoyance.Domain.Costs
+﻿namespace Clairvoyance.Domain.Costs;
+
+public class TapCost : CostBase, ICost
 {
-    public class TapCost : CostBase, ICost
+    public override bool CanPay()
     {
-        public override bool CanPay()
-        {
-            return Ability.Card.CanTap();
-        }
+        return Ability.Card.CanTap();
+    }
 
-        public override ICost Clone()
-        {
-            return new TapCost();
-        }
+    public override ICost Clone()
+    {
+        return new TapCost();
+    }
 
-        public override void Pay()
+    public override void Pay()
+    {
+        if (CanPay())
         {
-            if (CanPay())
-            {
-                Ability.Card.Tap();
-            }
+            Ability.Card.Tap();
         }
     }
 }

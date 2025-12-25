@@ -1,22 +1,21 @@
-﻿namespace Clairvoyance.Domain.Effects
+﻿namespace Clairvoyance.Domain.Effects;
+
+public class DrawCardEffect : EffectBase, IEffect
 {
-    public class DrawCardEffect : EffectBase, IEffect
+    public int CardToDraw { get; set; }
+
+    public DrawCardEffect(int cardToDraw)
     {
-        public int CardToDraw { get; set; }
+        CardToDraw = cardToDraw;
+    }
 
-        public DrawCardEffect(int cardToDraw)
-        {
-            CardToDraw = cardToDraw;
-        }
+    public override void Resolves()
+    {
+        Ability.Owner.Draw(CardToDraw);
+    }
 
-        public override void Resolves()
-        {
-            Ability.Owner.Draw(CardToDraw);
-        }
-
-        public override IEffect Clone()
-        {
-            return new DrawCardEffect(CardToDraw);
-        }
+    public override IEffect Clone()
+    {
+        return new DrawCardEffect(CardToDraw);
     }
 }

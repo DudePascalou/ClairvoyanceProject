@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
+﻿namespace Clairvoyance.Domain;
 
-namespace Clairvoyance.Domain
+public class OutOfTheGame : CardSetBase, ICardSet
 {
-    public class OutOfTheGame : CardSetBase, ICardSet
-    {
-        public OutOfTheGame() : base()
-        { }
+    public OutOfTheGame() : base()
+    { }
 
-        public OutOfTheGame(IList<Card> cards) : base(cards)
-        { }
-    }
+    public OutOfTheGame(IList<Card> cards) : base(cards)
+    { }
 }

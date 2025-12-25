@@ -1,78 +1,77 @@
 ﻿using Clairvoyance.Domain;
 
-namespace Clairvoyance.Tests.Resources
+namespace Clairvoyance.Tests.Resources;
+
+public static class CardSamples
 {
-    public static class CardSamples
+    public static Card Artifact
     {
-        public static Card Artifact
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Artifact;
-                card.Types = new string[1] { CardType.Artifact };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Artifact;
+            card.Types = new string[1] { CardType.Artifact };
+            return card;
         }
-        public static Card Creature
+    }
+    public static Card Creature
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Creature;
-                card.Types = new string[1] { CardType.Creature };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Creature;
+            card.Types = new string[1] { CardType.Creature };
+            return card;
         }
-        public static Card Enchantment
+    }
+    public static Card Enchantment
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Enchantment;
-                card.Types = new string[1] { CardType.Enchantment };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Enchantment;
+            card.Types = new string[1] { CardType.Enchantment };
+            return card;
         }
-        public static Card Instant
+    }
+    public static Card Instant
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Instant;
-                card.Types = new string[1] { CardType.Instant };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Instant;
+            card.Types = new string[1] { CardType.Instant };
+            return card;
         }
-        public static Card Land
+    }
+    public static Card Land
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Land;
-                card.Types = new string[1] { CardType.Land };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Land;
+            card.Types = new string[1] { CardType.Land };
+            return card;
         }
-        public static Card Planeswalker
+    }
+    public static Card Planeswalker
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Planeswalker;
-                card.Types = new string[1] { CardType.Planeswalker };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Planeswalker;
+            card.Types = new string[1] { CardType.Planeswalker };
+            return card;
         }
-        public static Card Sorcery
+    }
+    public static Card Sorcery
+    {
+        get
         {
-            get
-            {
-                var card = Card.Fake;
-                card.Type = CardType.Sorcery;
-                card.Types = new string[1] { CardType.Sorcery };
-                return card;
-            }
+            var card = Card.Fake;
+            card.Type = CardType.Sorcery;
+            card.Types = new string[1] { CardType.Sorcery };
+            return card;
         }
     }
 }

@@ -1,11 +1,10 @@
 ﻿using Clairvoyance.Domain.Abilities;
 
-namespace Clairvoyance.Domain.Conditions
+namespace Clairvoyance.Domain.Conditions;
+
+public interface ICondition
 {
-    public interface ICondition
-    {
-        IAbility Ability { get; set; }
-        bool IsTrue();
-        ICondition Clone();
-    }
+    IAbility Ability { get; set; }
+    bool IsTrue();
+    ICondition Clone();
 }
