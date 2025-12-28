@@ -10,7 +10,7 @@ public class CollectionCard : ICollectionCard
     public string AppCardId { get; }
 
     /// <inheritdoc/>
-    public string CardId { get; }
+    public CardId CardId { get; }
 
     /// <inheritdoc/>
     public Grading? Grading { get; }
@@ -21,10 +21,10 @@ public class CollectionCard : ICollectionCard
     /// <inheritdoc/>
     public Language? Language { get; }
 
-    public CollectionCard(string cardId, string appCardId, string appCollectionId,
+    public CollectionCard(CardId cardId, string appCardId, string appCollectionId,
         bool isFoil = false, Language? language = null, Grading? grading = null)
     {
-        CardId = cardId ?? throw new ArgumentNullException(nameof(cardId));
+        CardId = cardId;
         AppCardId = appCardId ?? throw new ArgumentNullException(nameof(appCardId));
         AppCollectionId = appCollectionId ?? throw new ArgumentNullException(nameof(appCollectionId));
         IsFoil = isFoil;

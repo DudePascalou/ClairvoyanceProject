@@ -2,6 +2,7 @@
 using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using Clairvoyance.Collections.Domain;
+using Clairvoyance.Services.Scryfall;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
@@ -9,26 +10,25 @@ using System.Text.Json;
 
 namespace Clairvoyance.Collections.CardHunter;
 
-public class CHConnector
+public class CardHunterConnector
 {
-    private const string _AppConfigurationKey = "CardHunter";
     private readonly string _Url;
     private readonly ILogger _Logger;
-    private readonly HttpClient http;
-    private readonly CollectionLocalRepository _Repository;
+    private readonly HttpClient _HttpClient;
+    private readonly CardHunterLocalRepository _Repository;
 
-    public CHConnector(ILogger<CHConnector> logger,
-        IOptions<AppConfiguration> appConfig,
-        JsonSerializerOptions jsonSerializerOptions)
+    public CardHunterConnector(ILoggerFactory loggerFactory,
+        IOptions<CardHunterConfiguration> cardHunterConfig,
+        CardHunterLocalRepository cardHunterLocalRepository)
     {
-        _Logger = logger;
-        http = new HttpClient(); // TODO: use IHttpClientFactory
-        http.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (compatible; MyScraper/1.0)");
-        http.DefaultRequestHeaders.Accept.ParseAdd("text/html");
-        _Url = appConfig.Value?.CollectionApps?
-            .FirstOrDefault(c => string.Equals(c.Key, _AppConfigurationKey, StringComparison.OrdinalIgnoreCase))
-            ?.Url ?? throw new InvalidOperationException($"App configuration for '{_AppConfigurationKey}' not found.");
-        _Repository = new CollectionLocalRepository(Path.Combine(appConfig.Value?.DatabaseDirectory!, _AppConfigurationKey), jsonSerializerOptions);
+        _ = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
+        _Logger = loggerFactory.CreateLogger<CardHunterConnector>();
+        _Url = cardHunterConfig.Value?.Url ?? throw new ArgumentNullException(nameof(cardHunterConfig));
+        _Repository = cardHunterLocalRepository ?? throw new ArgumentNullException(nameof(cardHunterLocalRepository));
+
+        _HttpClient = new HttpClient(); // TODO: use IHttpClientFactory
+        _HttpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (compatible; MyScraper/1.0)");
+        _HttpClient.DefaultRequestHeaders.Accept.ParseAdd("text/html");
     }
 
     public async Task DownloadCollection()
@@ -37,7 +37,7 @@ public class CHConnector
         var context = BrowsingContext.New(config);
 
         Uri firstPageUri = new(_Url);
-        var firstPageHtml = await http.GetStringAsync(firstPageUri);
+        var firstPageHtml = await _HttpClient.GetStringAsync(firstPageUri);
         var firstPageDocument = await context.OpenAsync(req => req.Content(firstPageHtml).Address(firstPageUri));
         var collecTotal = "Total: " + firstPageDocument.QuerySelector("#usercollechead h4 #collectotal").TextContent
             + " " + firstPageDocument.QuerySelector("#usercollechead h5").TextContent;
@@ -142,7 +142,7 @@ public class CHConnector
         // include referer for politeness/compatibility
         request.Headers.Referrer = new(_Url);
 
-        using var nextPage = await http.SendAsync(request);
+        using var nextPage = await _HttpClient.SendAsync(request);
         var html = await nextPage.Content.ReadAsStringAsync();
 
         var nextPageDocument = await context.OpenAsync(req => req.Content(html).Address(_Url));
@@ -162,18 +162,16 @@ public class CHConnector
             // "/magic/cartes/88888888/XXX/XXX888/"
             var hrefParts = href?.Split('/', StringSplitOptions.RemoveEmptyEntries);
             var appCardId = hrefParts?.Length >= 2 ? hrefParts[2] : null;
-            var expansionCode = hrefParts?.Length >= 3 ? hrefParts[3] : null;
-            var expansionNumber = hrefParts?.Length >= 4 ? hrefParts[4][(expansionCode?.Length ?? 0)..] : null;
+            var cardId = hrefParts?.Length >= 4 ? hrefParts[4] : null;
             var isFoil = cells[1].QuerySelector("b.rouge") != null;
             var grading = cells[2].TextContent.Trim();
             var language = cells[3].TextContent.Trim();
 
-            if (appCardId != null && expansionCode != null && expansionNumber != null && appCollectionId != null)
+            if (cardId != null && appCardId != null && appCollectionId != null)
             {
-                var cardId = new Card(expansionCode, expansionNumber).Id;
                 var collectionCard = new CollectionCard
                 (
-                    cardId: cardId,
+                    cardId: new CardId(cardId),
                     appCardId: appCardId,
                     appCollectionId: appCollectionId,
                     isFoil: isFoil,
@@ -198,6 +196,7 @@ public class CHConnector
             "Neuve" => Grading.NearMintMint,
             "Presque neuve" => Grading.NearMint,
             "Jouée" => Grading.Good,
+            "Usée" => Grading.Fair,
             "Mâchée" => Grading.Poor,
             _ => null,
         };

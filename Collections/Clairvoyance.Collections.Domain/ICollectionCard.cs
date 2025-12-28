@@ -18,10 +18,9 @@ public interface ICollectionCard
     string AppCollectionId { get; }
 
     /// <summary>
-    /// Gets the card’s unique identifier
-    /// (that is expansion + number).
+    /// Gets the card’s unique identifier.
     /// </summary>
-    string CardId { get; }
+    CardId CardId { get; }
 
     /// <summary>
     /// Gets the grading information of the current card specimen.

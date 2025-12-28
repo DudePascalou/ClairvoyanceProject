@@ -24,12 +24,9 @@ public sealed class LanguageJsonConverter : JsonConverter<Language>
         }
 
         var parsed = Language.ParseFromKey(s) ?? Language.ParseFromValue(s);
-        if (parsed is null)
-        {
-            throw new JsonException($"Unknown language key/value '{s}'.");
-        }
-
-        return parsed.Value;
+        return parsed is null
+            ? throw new JsonException($"Unknown language key/value '{s}'.")
+            : parsed.Value;
     }
 
     public override void Write(Utf8JsonWriter writer, Language value, JsonSerializerOptions options)

@@ -3,9 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Clairvoyance.Collections.Domain;
 
-public sealed class GradingJsonConverter : JsonConverter<Grading>
+public sealed class CardIdJsonConverter : JsonConverter<CardId>
 {
-    public override Grading Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override CardId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         if (reader.TokenType == JsonTokenType.Null)
         {
@@ -23,20 +23,17 @@ public sealed class GradingJsonConverter : JsonConverter<Grading>
             return default;
         }
 
-        var parsed = Grading.ParseFromKey(s) ?? Grading.ParseFromValue(s);
-        return parsed is null
-            ? throw new JsonException($"Unknown grading key/value '{s}'.")
-            : parsed.Value;
+        return new CardId(s);
     }
 
-    public override void Write(Utf8JsonWriter writer, Grading value, JsonSerializerOptions options)
+    public override void Write(Utf8JsonWriter writer, CardId value, JsonSerializerOptions options)
     {
-        if (string.IsNullOrEmpty(value.Key))
+        if (string.IsNullOrEmpty(value.ExpansionCode) && string.IsNullOrEmpty(value.ExpansionNumber))
         {
             writer.WriteNullValue();
             return;
         }
 
-        writer.WriteStringValue(value.Key);
+        writer.WriteStringValue(value.ToString());
     }
 }

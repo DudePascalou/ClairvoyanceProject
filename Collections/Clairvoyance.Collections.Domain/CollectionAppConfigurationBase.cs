@@ -1,8 +1,7 @@
 ﻿namespace Clairvoyance.Collections.Domain;
 
-public class CollectionAppConfiguration
+public abstract class CollectionAppConfigurationBase
 {
     public string? Key { get; set; }
     public string? Name { get; set; }
-    public string? Url { get; set; }
 }
