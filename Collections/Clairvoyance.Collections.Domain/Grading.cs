@@ -29,15 +29,31 @@ public readonly struct Grading : IKeyValue
     public static readonly Grading Fair = new("1.5", "Fair");
     public static readonly Grading Poor = new("1", "Poor");
 
-    private static readonly IReadOnlyList<Grading> All =
+    private static readonly List<Grading> All =
     [
         GemMint, Mint, NearMintMint, NearMint, ExcellentMint, Excellent,
         VeryGoodExcellent, VeryGood, Good, Fair, Poor
     ];
 
-    public static Grading? ParseFromKey(string key) => All.FirstOrDefault(g => g.Key == key);
+    public static Grading? ParseFromKey(string key)
+    {
+        if (!string.IsNullOrEmpty(key) &&
+            All.Exists(l => l.Key.Equals(key, StringComparison.InvariantCultureIgnoreCase)))
+        {
+            return All.First(l => l.Key.Equals(key, StringComparison.InvariantCultureIgnoreCase));
+        }
+        return null;
+    }
 
-    public static Grading? ParseFromValue(string value) => All.FirstOrDefault(g => g.Value == value);
+    public static Grading? ParseFromValue(string value)
+    {
+        if (!string.IsNullOrEmpty(value) &&
+            All.Exists(l => l.Value.Equals(value, StringComparison.InvariantCultureIgnoreCase)))
+        {
+            return All.First(l => l.Value.Equals(value, StringComparison.InvariantCultureIgnoreCase));
+        }
+        return null;
+    }
 
     public override string ToString() => Value;
 }

@@ -1,0 +1,1095 @@
+﻿<table class="caption-bottom bg-black1/30 text-sm h-full w-full overflow-auto" data-testid="setResultsTable">
+    <thead class="p-small [&amp;_tr]:border-b [&amp;_tr]:border-b-purple3 sticky top-0 bg-black0 z-10">
+        <tr class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors">
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0 w-[40px]">
+            </th>
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0 w-[10rem]">
+                <section class="flex cursor-pointer items-center gap-small" data-testid="headerWithSortTableHeader"
+                    role="button" tabindex="0">SET NAME<section class="flex flex-col"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-up cursor-pointer opacity-50" aria-hidden="true"
+                            data-testid="headerWithSortChevronUp">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-chevron-down -mt-[0.95rem] cursor-pointer opacity-50"
+                            aria-hidden="true" data-testid="headerWithSortChevronDown">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></section>
+                </section>
+            </th>
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <section class="flex cursor-pointer items-center gap-small" data-testid="headerWithSortTableHeader"
+                    role="button" tabindex="0">SET CODE<section class="flex flex-col"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-up cursor-pointer opacity-50" aria-hidden="true"
+                            data-testid="headerWithSortChevronUp">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-chevron-down -mt-[0.95rem] cursor-pointer opacity-50"
+                            aria-hidden="true" data-testid="headerWithSortChevronDown">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></section>
+                </section>
+            </th>
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <section class="flex cursor-pointer items-center gap-small" data-testid="headerWithSortTableHeader"
+                    role="button" tabindex="0">CARD COUNT<section class="flex flex-col"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-up cursor-pointer opacity-50" aria-hidden="true"
+                            data-testid="headerWithSortChevronUp">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-chevron-down -mt-[0.95rem] cursor-pointer opacity-50"
+                            aria-hidden="true" data-testid="headerWithSortChevronDown">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></section>
+                </section>
+            </th>
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <section class="flex cursor-pointer items-center gap-small" data-testid="headerWithSortTableHeader"
+                    role="button" tabindex="0">RELEASE DATE<section class="flex flex-col"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-up cursor-pointer opacity-50" aria-hidden="true"
+                            data-testid="headerWithSortChevronUp">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-chevron-down -mt-[0.95rem] cursor-pointer opacity-100"
+                            aria-hidden="true" data-testid="headerWithSortChevronDown">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg></section>
+                </section>
+            </th>
+            <th
+                class="p-medium text-left font-gotham text-xsmall font-bold leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                LANGUAGE</th>
+        </tr>
+    </thead>
+    <tbody class="[&amp;_tr:last-child]:border-0">
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Modern Horizons 3 Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/M3C/M3C.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/M3C">Modern Horizons 3 Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                M3C</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                396</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-05-31</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Modern Horizons 3 set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/MH3/MH3.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MH3">Modern Horizons 3</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MH3</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                522</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-05-02</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Outlaws of Thunder Junction set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/OTJ/OTJ.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/OTJ">Outlaws of Thunder Junction</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                OTJ</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                374</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-03-22</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Outlaws of Thunder Junction Breaking News set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/OTP/OTP.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/OTP">Outlaws of Thunder Junction Breaking
+                    News</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                OTP</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                82</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-03-18</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Outlaws of Thunder Junction: The Big Score set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/BIG/BIG.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/BIG">Outlaws of Thunder Junction: The Big
+                    Score</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                BIG</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                90</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-03-18</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Outlaws of Thunder Junction Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/OTC/OTC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/OTC">Outlaws of Thunder Junction Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                OTC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                343</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-03-18</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage"
+                        class="opacity-50">IT</span><span data-testid="setResultLanguage">JP</span><span
+                        data-testid="setResultLanguage" class="opacity-50">KO</span><span
+                        data-testid="setResultLanguage" class="opacity-50">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Magic The Gathering—Fallout set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/PIP/PIP.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/PIP">Magic The Gathering—Fallout</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                PIP</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                540</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-02-20</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage"
+                        class="opacity-50">PT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">RU</span><span data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Murders at Karlov Manor set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/MKM/MKM.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MKM">Murders at Karlov Manor</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MKM</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                450</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-01-29</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Ravnica Clue Edition set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/CLU/CLU.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/CLU">Ravnica Clue Edition</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                CLU</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                288</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-01-29</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage" class="opacity-50">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage"
+                        class="opacity-50">FR</span><span data-testid="setResultLanguage"
+                        class="opacity-50">DE</span><span data-testid="setResultLanguage"
+                        class="opacity-50">IT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage"
+                        class="opacity-50">PT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">RU</span><span data-testid="setResultLanguage" class="opacity-50">SP</span>
+                </section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Murders at Karlov Manor Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/MKC/MKC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MKC">Murders at Karlov Manor Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MKC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                357</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2024-01-16</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage"
+                        class="opacity-50">PT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">RU</span><span data-testid="setResultLanguage" class="opacity-50">SP</span>
+                </section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Ravnica Remastered set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/RVR/RVR.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/RVR">Ravnica Remastered</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                RVR</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                477</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-11-28</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for The Lost Caverns of Ixalan Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/LCC/LCC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/LCC">The Lost Caverns of Ixalan Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                LCC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                379</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-11-08</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for The Lost Caverns of Ixalan set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/LCI/LCI.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/LCI">The Lost Caverns of Ixalan</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                LCI</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                465</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-11-01</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Jurassic World Collection Cards set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/REX/REX.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/REX">Jurassic World Collection Cards</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                REX</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                33</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-11-01</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for The Lord of the Rings: Tales of Middle Earth set" loading="lazy" width="20"
+                    height="20" decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/LTR/LTR.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/LTR">The Lord of the Rings: Tales of Middle
+                    Earth</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                LTR</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                748</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-10-19</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for The Lord of the Rings: Tales of Middle Earth Commander set" loading="lazy" width="20"
+                    height="20" decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/LTC/LTC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/LTC">The Lord of the Rings: Tales of Middle
+                    Earth Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                LTC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                501</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-10-19</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Doctor Who Commander set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/WHO/WHO.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/WHO">Doctor Who Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                WHO</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                604</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-09-11</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage" class="opacity-50">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage"
+                        class="opacity-50">IT</span><span data-testid="setResultLanguage">JP</span><span
+                        data-testid="setResultLanguage" class="opacity-50">KO</span><span
+                        data-testid="setResultLanguage" class="opacity-50">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage" class="opacity-50">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Wilds of Eldraine Enchanting Tales set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/WOT/WOT.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/WOT">Wilds of Eldraine Enchanting Tales</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                WOT</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                83</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-08-14</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Wilds of Eldraine Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/WOC/WOC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/WOC">Wilds of Eldraine Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                WOC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                172</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-08-14</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Wilds of Eldraine set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/WOE/WOE.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/WOE">Wilds of Eldraine</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                WOE</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                453</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-08-14</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Commander Masters set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/CMM/CMM.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/CMM">Commander Masters</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                CMM</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                1068</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-07-12</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for March of the Machine: The Aftermath set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/MAT/MAT.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MAT">March of the Machine: The Aftermath</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MAT</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                230</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-05-03</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for March of the Machine Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/MOC/MOC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MOC">March of the Machine Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MOC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                457</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-03-17</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for March of the Machine Multiverse Legends set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/MUL/MUL.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MUL">March of the Machine Multiverse Legends</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MUL</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                65</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-03-16</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage">KO</span><span
+                        data-testid="setResultLanguage">PT</span><span data-testid="setResultLanguage">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for March of the Machine set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/MOM/MOM.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/MOM">March of the Machine</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                MOM</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                453</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-03-15</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage">KO</span><span
+                        data-testid="setResultLanguage">PT</span><span data-testid="setResultLanguage">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Shadows of the Past set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/SIS/SIS.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/SIS">Shadows of the Past</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                SIS</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                83</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-03-03</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage" class="opacity-50">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage"
+                        class="opacity-50">FR</span><span data-testid="setResultLanguage"
+                        class="opacity-50">DE</span><span data-testid="setResultLanguage"
+                        class="opacity-50">IT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage"
+                        class="opacity-50">PT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">RU</span><span data-testid="setResultLanguage" class="opacity-50">SP</span>
+                </section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Shadows Over Innistrad Remastered set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/SIR/SIR.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/SIR">Shadows Over Innistrad Remastered</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                SIR</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                317</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-02-27</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage" class="opacity-50">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage"
+                        class="opacity-50">FR</span><span data-testid="setResultLanguage"
+                        class="opacity-50">DE</span><span data-testid="setResultLanguage"
+                        class="opacity-50">IT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage"
+                        class="opacity-50">PT</span><span data-testid="setResultLanguage"
+                        class="opacity-50">RU</span><span data-testid="setResultLanguage" class="opacity-50">SP</span>
+                </section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Phyrexia: All Will Be One Commander set" loading="lazy" width="20" height="20"
+                    decoding="async" data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]"
+                    style="color: transparent;" src="https://gatherer-static.wizards.com/set_symbols/ONC/ONC.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/ONC">Phyrexia: All Will Be One Commander</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                ONC</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                172</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-01-31</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Phyrexia: All Will Be One set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/ONE/ONE.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/ONE">Phyrexia: All Will Be One</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                ONE</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                390</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-01-31</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium"><span data-testid="setResultLanguage">简体</span><span
+                        data-testid="setResultLanguage" class="opacity-50">繁體</span><span
+                        data-testid="setResultLanguage">EN</span><span data-testid="setResultLanguage">FR</span><span
+                        data-testid="setResultLanguage">DE</span><span data-testid="setResultLanguage">IT</span><span
+                        data-testid="setResultLanguage">JP</span><span data-testid="setResultLanguage"
+                        class="opacity-50">KO</span><span data-testid="setResultLanguage">PT</span><span
+                        data-testid="setResultLanguage" class="opacity-50">RU</span><span
+                        data-testid="setResultLanguage">SP</span></section>
+            </td>
+        </tr>
+        <tr class="data-[state=selected]:bg-muted border-b border-b-gray2 transition-colors cursor-pointer font-gotham text-[1.6rem] font-light leading-[28rem] text-white-primary hover:bg-white-primary/30"
+            data-testid="setResultsRow">
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 px-xsmall text-center">
+                <img alt="Logo for Dominaria Remastered set" loading="lazy" width="20" height="20" decoding="async"
+                    data-nimg="1" class="mx-auto h-[2rem] w-auto max-w-[3rem]" style="color: transparent;"
+                    src="https://gatherer-static.wizards.com/set_symbols/DMR/DMR.png">
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                <a class="text-bold w-[30rem] line-clamp-2" href="/sets/DMR">Dominaria Remastered</a>
+            </td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                DMR</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0">
+                467</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
+                2023-01-03</td>
+            <td
+                class="p-medium align-middle font-gotham text-small font-light leading-medium [&amp;:has([role=checkbox])]:pr-0 whitespace-nowrap">
+                <section class="flex gap-medium">
+                    <span data-testid="setResultLanguage">简体</span>
+                    <span data-testid="setResultLanguage" class="opacity-50">繁體</span>
+                    <span data-testid="setResultLanguage">EN</span>
+                    <span data-testid="setResultLanguage">FR</span>
+                    <span data-testid="setResultLanguage">DE</span>
+                    <span data-testid="setResultLanguage">IT</span>
+                    <span data-testid="setResultLanguage">JP</span>
+                    <span data-testid="setResultLanguage" class="opacity-50">KO</span>
+                    <span data-testid="setResultLanguage">PT</span>
+                    <span data-testid="setResultLanguage" class="opacity-50">RU</span>
+                    <span data-testid="setResultLanguage">SP</span>
+                </section>
+            </td>
+        </tr>
+    </tbody>
+</table>

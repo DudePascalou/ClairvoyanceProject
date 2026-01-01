@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Clairvoyance.Core\Clairvoyance.Core.csproj" />
-    <ProjectReference Include="..\..\Clairvoyance.Services\Clairvoyance.Services.csproj" />
   </ItemGroup>
 
 </Project>

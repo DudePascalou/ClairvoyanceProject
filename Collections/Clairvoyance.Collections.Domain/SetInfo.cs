@@ -1,0 +1,16 @@
+﻿namespace Clairvoyance.Collections.Domain;
+
+public class SetInfo
+{
+    public string Code { get; init; } = null!;
+    public string Name { get; init; } = null!;
+    public int CardCount { get; init; }
+    public DateOnly ReleaseDate { get; init; }
+    public string Url { get; init; } = null!;
+    public IEnumerable<Language> Languages { get; init; } = null!;
+
+    public override string ToString()
+    {
+        return $"[{Code}] {Name} ({CardCount} cards, released on {ReleaseDate:yyyy-MM-dd})";
+    }
+}

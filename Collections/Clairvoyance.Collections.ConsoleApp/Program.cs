@@ -1,5 +1,6 @@
 ﻿using Clairvoyance.Collections.CardHunter;
 using Clairvoyance.Collections.Domain;
+using Clairvoyance.Services.Gatherer;
 using Clairvoyance.Services.Scryfall;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,10 +28,12 @@ internal static class Program
             .ConfigureServices((hostContext, services) =>
             {
                 services.AddMemoryCache();
+                services.AddHttpClient();
 
                 services.Configure<AppConfiguration>(hostContext.Configuration.GetSection(nameof(AppConfiguration)));
                 services.Configure<CardHunterConfiguration>(hostContext.Configuration.GetSection(nameof(CardHunterConfiguration)));
                 services.Configure<ScryfallConfiguration>(hostContext.Configuration.GetSection(nameof(ScryfallConfiguration)));
+                services.Configure<GathererConfiguration>(hostContext.Configuration.GetSection(nameof(GathererConfiguration)));
 
                 // Create and register shared JsonSerializerOptions with converters globally
                 var jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web)
@@ -46,12 +49,15 @@ internal static class Program
                 services.AddTransient<CardHunterConnector>();
 
                 services.AddSingleton<SetService>();
+                services.AddSingleton<GathererSetService>();
             })
             .Build();
 
-        var setService = host.Services.GetRequiredService<SetService>();
+        //var setService = host.Services.GetRequiredService<SetService>();
+        //await setService.StartAsync();
+        var setService = host.Services.GetRequiredService<GathererSetService>();
         await setService.StartAsync();
-        var connector = host.Services.GetRequiredService<CardHunterConnector>();
-        await connector.DownloadCollection();
+        //var connector = host.Services.GetRequiredService<CardHunterConnector>();
+        //await connector.DownloadCollection();
     }
 }

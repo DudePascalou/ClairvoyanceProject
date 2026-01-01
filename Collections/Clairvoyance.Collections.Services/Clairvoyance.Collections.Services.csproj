@@ -7,15 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="1.4.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Clairvoyance.Core\Clairvoyance.Core.csproj" />
+    <ProjectReference Include="..\..\Clairvoyance.Domain\Clairvoyance.Domain.csproj" />
     <ProjectReference Include="..\..\Clairvoyance.Services\Clairvoyance.Services.csproj" />
     <ProjectReference Include="..\Clairvoyance.Collections.Domain\Clairvoyance.Collections.Domain.csproj" />
-    <ProjectReference Include="..\Clairvoyance.Collections.Services\Clairvoyance.Collections.Services.csproj" />
   </ItemGroup>
 
 </Project>

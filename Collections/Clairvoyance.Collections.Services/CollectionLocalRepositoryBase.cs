@@ -1,9 +1,10 @@
-﻿using Clairvoyance.Services.Scryfall;
+﻿using Clairvoyance.Collections.Domain;
+using Clairvoyance.Services.Scryfall;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 
-namespace Clairvoyance.Collections.Domain;
+namespace Clairvoyance.Collections.Services;
 
 public abstract class CollectionLocalRepositoryBase<T>
     where T : CollectionAppConfigurationBase

@@ -1,4 +1,5 @@
 ﻿using Clairvoyance.Collections.Domain;
+using Clairvoyance.Collections.Services;
 using Clairvoyance.Services.Scryfall;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
