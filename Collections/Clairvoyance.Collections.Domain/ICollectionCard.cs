@@ -25,7 +25,7 @@ public interface ICollectionCard
     /// <summary>
     /// Gets the grading information of the current card specimen.
     /// </summary>
-    Grading? Grading { get; }
+    string Grading { get; }
 
     /// <summary>
     /// Indicates whether the current card specimen is a foil version.
@@ -35,5 +35,5 @@ public interface ICollectionCard
     /// <summary>
     /// Gets the language of the current card specimen.
     /// </summary>
-    Language? Language { get; }
+    string Language { get; }
 }

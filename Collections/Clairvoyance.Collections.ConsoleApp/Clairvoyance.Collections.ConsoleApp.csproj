@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\Clairvoyance.Services\Clairvoyance.Services.csproj" />
     <ProjectReference Include="..\Clairvoyance.Collections.CardHunter\Clairvoyance.Collections.CardHunter.csproj" />
     <ProjectReference Include="..\Clairvoyance.Collections.Domain\Clairvoyance.Collections.Domain.csproj" />
+    <ProjectReference Include="..\Clairvoyance.Collections.Moxfield\Clairvoyance.Collections.Moxfield.csproj" />
   </ItemGroup>
 
   <ItemGroup>

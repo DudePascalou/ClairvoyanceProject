@@ -28,7 +28,6 @@ public readonly struct CardId
         else
         {
             // Fallback to XXX888 format:
-            // TODO: won’t work for expansions with digits at the end of their code (e.g., "J25")
             ExpansionCode = GetExpansionCode(cardId) ?? throw new ArgumentException("Invalid card ID format.", nameof(cardId));
             ExpansionNumber = cardId[ExpansionCode.Length..];
         }
@@ -46,6 +45,7 @@ public readonly struct CardId
     {
         if (string.IsNullOrEmpty(cardId)) { return null; }
 
+        // NB: won’t work for expansions with digits at the end of their code (e.g., "J25")
         int i = cardId.Length - 1;
         while (i >= 0 && char.IsDigit(cardId[i])) { i--; }
 

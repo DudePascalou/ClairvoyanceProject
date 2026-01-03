@@ -1,5 +1,6 @@
 ﻿using Clairvoyance.Collections.CardHunter;
 using Clairvoyance.Collections.Domain;
+using Clairvoyance.Collections.Moxfield;
 using Clairvoyance.Services.Gatherer;
 using Clairvoyance.Services.Scryfall;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,10 +31,10 @@ internal static class Program
                 services.AddMemoryCache();
                 services.AddHttpClient();
 
-                services.Configure<AppConfiguration>(hostContext.Configuration.GetSection(nameof(AppConfiguration)));
                 services.Configure<CardHunterConfiguration>(hostContext.Configuration.GetSection(nameof(CardHunterConfiguration)));
-                services.Configure<ScryfallConfiguration>(hostContext.Configuration.GetSection(nameof(ScryfallConfiguration)));
+                services.Configure<MoxfieldConfiguration>(hostContext.Configuration.GetSection(nameof(MoxfieldConfiguration)));
                 services.Configure<GathererConfiguration>(hostContext.Configuration.GetSection(nameof(GathererConfiguration)));
+                services.Configure<ScryfallConfiguration>(hostContext.Configuration.GetSection(nameof(ScryfallConfiguration)));
 
                 // Create and register shared JsonSerializerOptions with converters globally
                 var jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web)
@@ -53,11 +54,13 @@ internal static class Program
             })
             .Build();
 
+        using var cts = new CancellationTokenSource();
         //var setService = host.Services.GetRequiredService<SetService>();
         //await setService.StartAsync();
-        var setService = host.Services.GetRequiredService<GathererSetService>();
-        await setService.StartAsync();
-        //var connector = host.Services.GetRequiredService<CardHunterConnector>();
-        //await connector.DownloadCollection();
+        //var setService = host.Services.GetRequiredService<GathererSetService>();
+        //await setService.StartAsync();
+        var connector = host.Services.GetRequiredService<CardHunterConnector>();
+        await connector.InitAsync(cts.Token);
+        await connector.DownloadCollectionAsync(cts.Token);
     }
 }

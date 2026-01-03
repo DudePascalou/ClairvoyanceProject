@@ -1,5 +1,6 @@
 ﻿using Clairvoyance.Collections.Domain;
-using Clairvoyance.Services.Scryfall;
+using Clairvoyance.Core.Exceptions;
+using Clairvoyance.Core.IO;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
@@ -9,33 +10,66 @@ namespace Clairvoyance.Collections.Services;
 public abstract class CollectionLocalRepositoryBase<T>
     where T : CollectionAppConfigurationBase
 {
+    private const string _SetsFileName = "Sets.json";
     private readonly ILogger _Logger;
+    private readonly T _Configuration;
     private readonly JsonSerializerOptions _JsonSerializerOptions;
-    private readonly SetService _SetService;
 
-    public string BaseDirectory { get; }
-
-    protected CollectionLocalRepositoryBase(IOptions<AppConfiguration> appConfig,
-        IOptions<T> collectionAppConfig,
+    protected CollectionLocalRepositoryBase(IOptions<T> collectionAppConfig,
         ILoggerFactory loggerFactory,
-        JsonSerializerOptions jsonSerializerOptions,
-        SetService setService)
+        JsonSerializerOptions jsonSerializerOptions)
     {
         _ = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         _Logger = loggerFactory.CreateLogger(GetType());
-        _JsonSerializerOptions = jsonSerializerOptions;
-        _SetService = setService;
-
-        _ = appConfig.Value?.DatabaseDirectory ?? throw new ArgumentNullException(nameof(appConfig));
-        _ = collectionAppConfig.Value?.Key ?? throw new ArgumentNullException(nameof(collectionAppConfig));
-        BaseDirectory = Path.Combine(appConfig.Value.DatabaseDirectory, collectionAppConfig.Value.Key);
+        _JsonSerializerOptions = jsonSerializerOptions ?? throw new ArgumentNullException(nameof(jsonSerializerOptions));
+        _Configuration = collectionAppConfig?.Value ?? throw new ArgumentNullException(nameof(collectionAppConfig));
     }
 
-    public async Task SaveCardsAsync(IEnumerable<CollectionCard> cards, CancellationToken cancellationToken = default)
+    #region Sets
+
+    public async Task<IEnumerable<SetInfo>> LoadSetsAsync(CancellationToken cancellationToken = default)
     {
-        if (!Directory.Exists(BaseDirectory))
+        if (!SetsExists())
         {
-            Directory.CreateDirectory(BaseDirectory);
+            throw new NotFoundException("Sets file not found.");
+        }
+
+        var setsFilePath = Path.Combine(_Configuration.BaseDirectory!, _SetsFileName);
+        var json = await File.ReadAllTextAsync(setsFilePath, cancellationToken);
+        var sets = JsonSerializer.Deserialize<List<SetInfo>>(json, _JsonSerializerOptions);
+        return sets ?? [];
+    }
+
+    public async Task SaveSetsAsync(IEnumerable<SetInfo> sets,
+        CancellationToken cancellationToken = default)
+    {
+        if (!Directory.Exists(_Configuration.BaseDirectory!))
+        {
+            Directory.CreateDirectory(_Configuration.BaseDirectory!);
+        }
+
+        var setsFilePath = Path.Combine(_Configuration.BaseDirectory!, _SetsFileName);
+        var json = JsonSerializer.Serialize(sets, _JsonSerializerOptions);
+        await File.WriteAllTextAsync(setsFilePath, json, cancellationToken);
+    }
+
+    public bool SetsExists()
+    {
+        var setsFilePath = Path.Combine(_Configuration.BaseDirectory!, _SetsFileName);
+        return File.Exists(setsFilePath);
+    }
+
+    #endregion
+
+    #region Cards
+
+    public async Task SaveCardsByExpansionAsync(IEnumerable<CollectionCard> cards,
+        ICollection<SetInfo> sets,
+        CancellationToken cancellationToken = default)
+    {
+        if (!Directory.Exists(_Configuration.BaseDirectory!))
+        {
+            Directory.CreateDirectory(_Configuration.BaseDirectory!);
         }
 
         var cardsByExpansion = cards
@@ -46,11 +80,11 @@ public abstract class CollectionLocalRepositoryBase<T>
         {
             if (cancellationToken.IsCancellationRequested)
             {
-                _Logger.LogInformation("Cancellation requested. Stopping card persistance.");
+                _Logger.LogDebug("Cancellation requested. Stopping card persistance.");
                 break;
             }
 
-            var expansionFilePath = Path.Combine(BaseDirectory, GetExpansionFileName(cardsGroup.Key));
+            var expansionFilePath = Path.Combine(_Configuration.BaseDirectory!, GetExpansionFileName(cardsGroup.Key, sets));
             var existingCardsJson = File.Exists(expansionFilePath)
                 ? await File.ReadAllTextAsync(expansionFilePath, cancellationToken)
                 : "[]";
@@ -62,19 +96,19 @@ public abstract class CollectionLocalRepositoryBase<T>
         }
     }
 
-    private string GetExpansionFileName(string expansionCode)
+    private string GetExpansionFileName(string expansionCode, ICollection<SetInfo> sets)
     {
-        // Example: "20230929-ABC-Expansion_Name.json"
-        const string fileNameTemplate = "{0:yyyyMMdd}-{1}-{2}.json";
-        var set = _SetService.GetSetByCode(expansionCode);
+        var set = sets.FirstOrDefault(s => expansionCode.Equals(s.Code, StringComparison.InvariantCultureIgnoreCase));
         if (set == null)
         {
-            _Logger.LogWarning("Set with code '{SetCode}' not found in SetService. Skipping saving cards for this set.", expansionCode);
-            return string.Format(fileNameTemplate, DateTime.MinValue, expansionCode, "unknown");
+            set = SetInfo.Unknown;
+            _Logger.LogWarning("Expansion with code '{ExpansionCode}' not found.", expansionCode);
         }
-        else
-        {
-            return string.Format(fileNameTemplate, set.ReleasedAt ?? DateTime.MinValue, expansionCode, set.Name.Replace(":", string.Empty).Replace(' ', '_'));
-        }
+
+        // Example: "20230929-ABC-Expansion_Name.json"
+        const string fileNameTemplate = "{0:yyyyMMdd}-{1}-{2}.json";
+        return string.Format(fileNameTemplate, set.ReleaseDate, set.Code, set.Name.CleanFileName());
     }
+
+    #endregion
 }

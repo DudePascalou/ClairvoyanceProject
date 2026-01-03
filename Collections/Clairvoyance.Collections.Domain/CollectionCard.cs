@@ -13,23 +13,23 @@ public class CollectionCard : ICollectionCard
     public CardId CardId { get; }
 
     /// <inheritdoc/>
-    public Grading? Grading { get; }
+    public string Grading { get; }
 
     /// <inheritdoc/>
     public bool IsFoil { get; }
 
     /// <inheritdoc/>
-    public Language? Language { get; }
+    public string Language { get; }
 
     public CollectionCard(CardId cardId, string appCardId, string appCollectionId,
-        bool isFoil = false, Language? language = null, Grading? grading = null)
+        string grading, string language, bool isFoil = false)
     {
-        CardId = cardId;
         AppCardId = appCardId ?? throw new ArgumentNullException(nameof(appCardId));
         AppCollectionId = appCollectionId ?? throw new ArgumentNullException(nameof(appCollectionId));
+        CardId = cardId;
+        Grading = grading ?? throw new ArgumentNullException(nameof(grading));
         IsFoil = isFoil;
-        Language = language;
-        Grading = grading;
+        Language = language ?? throw new ArgumentNullException(nameof(language));
     }
 
     public override string ToString()
