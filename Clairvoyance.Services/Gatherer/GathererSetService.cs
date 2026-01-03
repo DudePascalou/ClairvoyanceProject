@@ -91,8 +91,7 @@ public class GathererSetService
                 Name = cells[1].TextContent.Trim(),
                 CardCount = int.Parse(cells[3].TextContent.Trim()),
                 ReleaseDate = DateOnly.ParseExact(cells[4].TextContent.Trim(), "yyyy-MM-dd", CultureInfo.InvariantCulture),
-                Url = new Uri(_Configuration.BaseUrl! + cells[1].QuerySelector("a")!.GetAttribute("href")).ToString(),
-                Languages = ExtractLanguages(cells[5])
+                Url = new Uri(_Configuration.BaseUrl! + cells[1].QuerySelector("a")!.GetAttribute("href")).ToString()
             };
             setInfos.Add(setInfo);
             _Logger.LogInformation
@@ -107,20 +106,20 @@ public class GathererSetService
         return setInfos;
     }
 
-    private static List<Language> ExtractLanguages(IElement element)
-    {
-        var allLanguages = element.QuerySelectorAll("span").Select(e => e.TextContent);
-        var unavailableLanguages = element.QuerySelectorAll("span.opacity-50").Select(e => e.TextContent);
-        var availableLanguages = allLanguages.Except(unavailableLanguages).ToList();
-        var languages = new List<Language>(availableLanguages.Count);
-        foreach (var lang in availableLanguages)
-        {
-            var language = Language.ParseFromKey(lang);
-            if (language.HasValue)
-            {
-                languages.Add(language.Value);
-            }
-        }
-        return languages;
-    }
+    //private static List<Language> ExtractLanguages(IElement element)
+    //{
+    //    var allLanguages = element.QuerySelectorAll("span").Select(e => e.TextContent);
+    //    var unavailableLanguages = element.QuerySelectorAll("span.opacity-50").Select(e => e.TextContent);
+    //    var availableLanguages = allLanguages.Except(unavailableLanguages).ToList();
+    //    var languages = new List<Language>(availableLanguages.Count);
+    //    foreach (var lang in availableLanguages)
+    //    {
+    //        var language = Language.ParseFromKey(lang);
+    //        if (language.HasValue)
+    //        {
+    //            languages.Add(language.Value);
+    //        }
+    //    }
+    //    return languages;
+    //}
 }

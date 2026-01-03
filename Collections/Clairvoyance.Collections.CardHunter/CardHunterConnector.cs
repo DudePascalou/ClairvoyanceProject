@@ -76,11 +76,11 @@ public class CardHunterConnector
                 Name = expansionName,
                 CardCount = int.Parse(cardCountText),
                 ReleaseDate = DateOnly.ParseExact(releaseDateText, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture),
-                Url = new Uri(_Configuration.BaseUrl! + setItem.QuerySelector("a")!.GetAttribute("href")).ToString(),
+                Url = setItem.QuerySelector("a")!.GetAttribute("href")!,
             };
             sets.Add(setInfo);
         }
-        return sets;
+        return [.. sets.OrderByDescending(s => s.ReleaseDate)];
     }
 
     public async Task DownloadCollectionAsync(CancellationToken cancellationToken = default)

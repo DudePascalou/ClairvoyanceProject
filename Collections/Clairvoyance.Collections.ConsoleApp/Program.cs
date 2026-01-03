@@ -49,6 +49,9 @@ internal static class Program
                 services.AddTransient<CardHunterLocalRepository>();
                 services.AddTransient<CardHunterConnector>();
 
+                services.AddTransient<MoxfieldLocalRepository>();
+                services.AddTransient<MoxfieldConnector>();
+
                 services.AddSingleton<SetService>();
                 services.AddSingleton<GathererSetService>();
             })
@@ -61,6 +64,9 @@ internal static class Program
         //await setService.StartAsync();
         var connector = host.Services.GetRequiredService<CardHunterConnector>();
         await connector.InitAsync(cts.Token);
-        await connector.DownloadCollectionAsync(cts.Token);
+        //await connector.DownloadCollectionAsync(cts.Token);
+
+        var moxFieldConnector = host.Services.GetRequiredService<MoxfieldConnector>();
+        await moxFieldConnector.InitAsync(cts.Token);
     }
 }

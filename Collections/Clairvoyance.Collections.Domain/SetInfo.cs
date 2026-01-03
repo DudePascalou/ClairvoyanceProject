@@ -9,7 +9,6 @@ public class SetInfo
     public int CardCount { get; init; }
     public DateOnly ReleaseDate { get; init; }
     public string Url { get; init; } = null!;
-    public IEnumerable<Language>? Languages { get; init; } = null!;
 
     public override string ToString()
     {

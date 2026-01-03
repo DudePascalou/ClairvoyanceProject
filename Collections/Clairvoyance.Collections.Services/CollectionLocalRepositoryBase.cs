@@ -10,7 +10,7 @@ namespace Clairvoyance.Collections.Services;
 public abstract class CollectionLocalRepositoryBase<T>
     where T : CollectionAppConfigurationBase
 {
-    private const string _SetsFileName = "Sets.json";
+    private const string _SetsFileName = "_Sets.json";
     private readonly ILogger _Logger;
     private readonly T _Configuration;
     private readonly JsonSerializerOptions _JsonSerializerOptions;
