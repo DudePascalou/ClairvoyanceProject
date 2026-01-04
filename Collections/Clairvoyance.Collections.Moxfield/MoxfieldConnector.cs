@@ -9,9 +9,8 @@ public class MoxfieldConnector
 {
     private readonly MoxfieldConfiguration _Configuration;
     private readonly ILogger _Logger;
-    private readonly HttpClient _HttpClient;
+    //private readonly HttpClient _HttpClient;
     private readonly MoxfieldLocalRepository _Repository;
-    private ICollection<SetInfo> _Sets = [];
 
     public MoxfieldConnector(ILoggerFactory loggerFactory,
         IHttpClientFactory httpClientFactory,
@@ -23,35 +22,22 @@ public class MoxfieldConnector
         _Configuration = moxfieldConfig.Value ?? throw new ArgumentNullException(nameof(moxfieldConfig));
         _Repository = moxfieldLocalRepository ?? throw new ArgumentNullException(nameof(moxfieldLocalRepository));
 
-        _HttpClient = httpClientFactory.CreateClient(typeof(MoxfieldConnector).FullName!);
-
-        //User-Agent         Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
-        //Accept         text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-        //Accept-Encoding         gzip, deflate, br, zstd
-        //Accept-Language         en-US,en;q=0.5
-        //Sec-Fetch-Dest         document
-        //Sec-Fetch-Mode         navigate
-        //Sec-Fetch-Site         none
-        //Host         moxfield.com
-        _HttpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0");
-        _HttpClient.DefaultRequestHeaders.Accept.ParseAdd("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-        _HttpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.5");
-        _HttpClient.DefaultRequestHeaders.Connection.ParseAdd("keep-alive");
-        _HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Dest", "document");
-        _HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Mode", "navigate");
-        _HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Site", "none");
+        //_HttpClient = httpClientFactory.CreateClient(typeof(MoxfieldConnector).FullName!);
+        //_HttpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0");
+        //_HttpClient.DefaultRequestHeaders.Accept.ParseAdd("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+        //_HttpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.5");
+        //_HttpClient.DefaultRequestHeaders.Connection.ParseAdd("keep-alive");
+        //_HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Dest", "document");
+        //_HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Mode", "navigate");
+        //_HttpClient.DefaultRequestHeaders.Add("Sec-Fetch-Site", "none");
     }
 
     public async Task InitAsync(CancellationToken cancellationToken = default)
     {
-        if (_Repository.SetsExists())
+        if (!_Repository.SetsExists())
         {
-            _Sets = [.. await _Repository.LoadSetsAsync(cancellationToken)];
-        }
-        else
-        {
-            _Sets = await DownloadSetsAsync(cancellationToken);
-            await _Repository.SaveSetsAsync(_Sets, cancellationToken);
+            var sets = await DownloadSetsAsync(cancellationToken);
+            await _Repository.SaveSetsAsync(sets, cancellationToken);
         }
     }
 
@@ -61,7 +47,7 @@ public class MoxfieldConnector
         var context = BrowsingContext.New(config);
 
         var setsPageUri = new Uri(_Configuration.BaseUrl! + _Configuration.SetsPath!);
-        // Moxfield uses a Cloudflare protection page that forbids programmatic access to the sets page.
+        // Moxfield uses a Cloudflare protection page that forbids programmatic access to the web pages.
         //var setsPageHtml = await _HttpClient.GetStringAsync(setsPageUri, cancellationToken);
         // Load the static copy-pasted HTML content instead:
         var setsPageHtml = File.ReadAllText("Clairvoyance.Collections.Moxfield.Sets.html");
@@ -89,11 +75,16 @@ public class MoxfieldConnector
         return [.. sets.OrderByDescending(s => s.ReleaseDate)];
     }
 
-    public async Task DownloadCollection()
+    public async Task GenerateImportCsvAsync(CancellationToken cancellationToken = default)
     {
+        _Logger.LogInformation("Generating Moxfield import CSV...");
 
+        var collectionCards = await _Repository.LoadCollectionAsync(cancellationToken);
+        // TODO: card name is missing...
+        var csvContent = MoxfieldCsv.ToCsv(collectionCards);
+        var importFilePath = Path.Combine(_Configuration.BaseDirectory!, $"_{DateTime.Now:yyyyMMdd}_MoxfieldImport.csv");
+        await File.WriteAllTextAsync(importFilePath, csvContent, cancellationToken);
 
-        _Logger.LogInformation("Done.");
+        _Logger.LogInformation("Moxfield import CSV saved to: {ImportFilePath}", importFilePath);
     }
-
 }

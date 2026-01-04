@@ -15,7 +15,6 @@ public class CardHunterConnector
     private readonly ILogger _Logger;
     private readonly HttpClient _HttpClient;
     private readonly CardHunterLocalRepository _Repository;
-    private ICollection<SetInfo> _Sets = [];
 
     public CardHunterConnector(ILoggerFactory loggerFactory,
         IHttpClientFactory httpClientFactory,
@@ -34,14 +33,10 @@ public class CardHunterConnector
 
     public async Task InitAsync(CancellationToken cancellationToken = default)
     {
-        if (_Repository.SetsExists())
+        if (!_Repository.SetsExists())
         {
-            _Sets = [.. await _Repository.LoadSetsAsync(cancellationToken)];
-        }
-        else
-        {
-            _Sets = await DownloadSetsAsync(cancellationToken);
-            await _Repository.SaveSetsAsync(_Sets, cancellationToken);
+            var sets = await DownloadSetsAsync(cancellationToken);
+            await _Repository.SaveSetsAsync(sets, cancellationToken);
         }
     }
 
@@ -242,6 +237,6 @@ public class CardHunterConnector
                 _Logger.LogWarning("Could not parse card from row with id '{TrId}' and href '{Href}'", trId, href);
             }
         }
-        await _Repository.SaveCardsByExpansionAsync(cards, _Sets, cancellationToken);
+        await _Repository.SaveCollectionAsync(cards, cancellationToken);
     }
 }

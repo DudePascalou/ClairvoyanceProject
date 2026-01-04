@@ -1,4 +1,5 @@
 ﻿using Clairvoyance.Collections.CardHunter;
+using Clairvoyance.Collections.ConsoleApp.Mappers;
 using Clairvoyance.Collections.Domain;
 using Clairvoyance.Collections.Moxfield;
 using Clairvoyance.Services.Gatherer;
@@ -52,8 +53,10 @@ internal static class Program
                 services.AddTransient<MoxfieldLocalRepository>();
                 services.AddTransient<MoxfieldConnector>();
 
-                services.AddSingleton<SetService>();
-                services.AddSingleton<GathererSetService>();
+                services.AddTransient<CardHunterToMoxfieldMapper>();
+
+                //services.AddSingleton<SetService>();
+                //services.AddSingleton<GathererSetService>();
             })
             .Build();
 
@@ -62,11 +65,16 @@ internal static class Program
         //await setService.StartAsync();
         //var setService = host.Services.GetRequiredService<GathererSetService>();
         //await setService.StartAsync();
-        var connector = host.Services.GetRequiredService<CardHunterConnector>();
-        await connector.InitAsync(cts.Token);
+        var cardHunterConnector = host.Services.GetRequiredService<CardHunterConnector>();
+        await cardHunterConnector.InitAsync(cts.Token);
         //await connector.DownloadCollectionAsync(cts.Token);
 
         var moxFieldConnector = host.Services.GetRequiredService<MoxfieldConnector>();
         await moxFieldConnector.InitAsync(cts.Token);
+        
+        var mapper = host.Services.GetRequiredService<CardHunterToMoxfieldMapper>();
+        await mapper.MapCollectionsAsync(cts.Token);
+
+        await moxFieldConnector.GenerateImportCsvAsync(cts.Token);
     }
 }

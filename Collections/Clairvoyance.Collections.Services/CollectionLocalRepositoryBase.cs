@@ -1,6 +1,7 @@
 ﻿using Clairvoyance.Collections.Domain;
 using Clairvoyance.Core.Exceptions;
 using Clairvoyance.Core.IO;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
@@ -13,14 +14,17 @@ public abstract class CollectionLocalRepositoryBase<T>
     private const string _SetsFileName = "_Sets.json";
     private readonly ILogger _Logger;
     private readonly T _Configuration;
+    private readonly IMemoryCache _Cache;
     private readonly JsonSerializerOptions _JsonSerializerOptions;
 
     protected CollectionLocalRepositoryBase(IOptions<T> collectionAppConfig,
         ILoggerFactory loggerFactory,
+        IMemoryCache memoryCache,
         JsonSerializerOptions jsonSerializerOptions)
     {
         _ = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         _Logger = loggerFactory.CreateLogger(GetType());
+        _Cache = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
         _JsonSerializerOptions = jsonSerializerOptions ?? throw new ArgumentNullException(nameof(jsonSerializerOptions));
         _Configuration = collectionAppConfig?.Value ?? throw new ArgumentNullException(nameof(collectionAppConfig));
     }
@@ -29,14 +33,27 @@ public abstract class CollectionLocalRepositoryBase<T>
 
     public async Task<IEnumerable<SetInfo>> LoadSetsAsync(CancellationToken cancellationToken = default)
     {
+        if (!Directory.Exists(_Configuration.BaseDirectory!))
+        {
+            throw new NotFoundException("Collection directory not found.");
+        }
+        var setsFilePath = Path.Combine(_Configuration.BaseDirectory!, _SetsFileName);
+
+        if (_Cache.TryGetValue(setsFilePath, out IEnumerable<SetInfo>? cachedSets))
+        {
+            return cachedSets!;
+        }
+
         if (!SetsExists())
         {
             throw new NotFoundException("Sets file not found.");
         }
 
-        var setsFilePath = Path.Combine(_Configuration.BaseDirectory!, _SetsFileName);
         var json = await File.ReadAllTextAsync(setsFilePath, cancellationToken);
         var sets = JsonSerializer.Deserialize<List<SetInfo>>(json, _JsonSerializerOptions);
+
+        _Cache.Set(setsFilePath, sets, TimeSpan.FromDays(1));
+
         return sets ?? [];
     }
 
@@ -61,10 +78,41 @@ public abstract class CollectionLocalRepositoryBase<T>
 
     #endregion
 
-    #region Cards
+    #region Collection Cards
 
-    public async Task SaveCardsByExpansionAsync(IEnumerable<CollectionCard> cards,
-        ICollection<SetInfo> sets,
+    public async Task<IEnumerable<CollectionCard>> LoadCollectionAsync(CancellationToken cancellationToken = default)
+    {
+        if (!Directory.Exists(_Configuration.BaseDirectory!))
+        {
+            throw new NotFoundException("Collection directory not found.");
+        }
+
+        var collectionFiles = Directory.GetFiles(_Configuration.BaseDirectory!, "*.json")
+            .Where(f => !f.EndsWith(_SetsFileName, StringComparison.InvariantCultureIgnoreCase))
+            .Where(f => !f.Contains(SetInfo.Unknown.Name, StringComparison.InvariantCultureIgnoreCase))
+            .ToList();
+
+        var allCards = new List<CollectionCard>();
+        foreach (var filePath in collectionFiles)
+        {
+            if (cancellationToken.IsCancellationRequested)
+            {
+                _Logger.LogDebug("Cancellation requested. Stopping collection loading.");
+                break;
+            }
+
+            var json = await File.ReadAllTextAsync(filePath, cancellationToken);
+            var cards = JsonSerializer.Deserialize<List<CollectionCard>>(json, _JsonSerializerOptions);
+            if (cards != null)
+            {
+                allCards.AddRange(cards);
+            }
+        }
+
+        return allCards;
+    }
+
+    public async Task SaveCollectionAsync(IEnumerable<CollectionCard> cards,
         CancellationToken cancellationToken = default)
     {
         if (!Directory.Exists(_Configuration.BaseDirectory!))
@@ -72,6 +120,7 @@ public abstract class CollectionLocalRepositoryBase<T>
             Directory.CreateDirectory(_Configuration.BaseDirectory!);
         }
 
+        var sets = (await LoadSetsAsync(cancellationToken)).ToList();
         var cardsByExpansion = cards
             .GroupBy(c => c.CardId.ExpansionCode)
             .OrderBy(g => g.Key);
